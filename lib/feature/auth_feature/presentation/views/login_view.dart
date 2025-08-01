@@ -50,7 +50,7 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               CustomButton(onpressed: () {
-                          context.go(AppRouter.signUp);  
+                          context.go("/home");  
               }, text: AppStrings.login),
               
               SizedBox(height: 20),

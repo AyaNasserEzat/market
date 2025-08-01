@@ -4,6 +4,7 @@ import 'package:pure_soft/feature/auth_feature/presentation/views/login_view.dar
 import 'package:pure_soft/feature/auth_feature/presentation/views/otp_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
+import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 
 class AppRouter {
   static String signUp = "/signUp";
@@ -20,6 +21,10 @@ class AppRouter {
          GoRoute(
         path: "/otp",
         builder: (context, state) => const OtpView(),
+      ),
+               GoRoute(
+        path: "/home",
+        builder: (context, state) => const HomeView(),
       ),
     ],
   );

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/auth_header.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_button.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_row.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/phone_with_whatsap_text_filed.dart';
-import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/pin_code_fields.dart';
 
 class ForgetPasswordView extends StatelessWidget {
   const ForgetPasswordView({super.key});

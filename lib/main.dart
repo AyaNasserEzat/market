@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/routs/app_routs.dart';
 
 
@@ -12,12 +13,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-     routerConfig: AppRouter.router,
-     
-   
+    return ScreenUtilInit(
+      designSize: Size(430, 932),
+      
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+       routerConfig: AppRouter.router,
+       
+         
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
@@ -31,7 +32,7 @@ class _SplashViewState extends State<SplashView> {
       body:Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-  Image.asset("assets/images/6666666666 copy 1.png",width: 441.75,height: 223,),
+  Image.asset("assets/images/6666666666 copy 1.png",width: 441.w,height: 223.h,),
  SizedBox(height: 160,),
   Image.asset("assets/images/343434 1.png",width: 441.75,height: 314.61,)
         ],
