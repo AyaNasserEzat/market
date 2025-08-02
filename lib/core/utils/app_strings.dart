@@ -30,4 +30,6 @@ class AppStrings {
   static const String notReceived = 'Not received?';
   static const String sendAgain = 'Send Again';
     static const String submit = 'Submit';
+        static const String basket = 'Basket';
+            static const String checkOut = 'Procced to Checkout';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/cart_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 
 class BottomNavigationBar extends StatefulWidget {
@@ -15,7 +16,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
   final List<Widget> pages = [
   HomeView(),
     HomeView(),
-      HomeView(),
+ CartView(),
         HomeView(),
           HomeView(),
   ];

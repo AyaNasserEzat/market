@@ -41,6 +41,10 @@ class AppRouter {
                            GoRoute(
         path: "/productDetails",
         builder: (context, state) =>  ProductDetailsView(),
+      ),
+                                 GoRoute(
+        path: "/cart",
+        builder: (context, state) =>  ProductDetailsView(),
       )
     ],
   );
