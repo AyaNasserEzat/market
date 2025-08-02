@@ -8,5 +8,8 @@ class AppColor {
   static Color white = Color(0xffFFFFFF);
   static Color green2 = Color(0xff204F38);
   static Color orange = Color(0xffED692E);
-  static Color gray2 = Color(0xffF9F9F);
+  static Color gray2 = Color(0xffC8C8C8);
+    static Color red = Color(0xffFF4A4A);
+       static Color green3 = Color(0xff00BB1A); 
+          static Color pink = Color(0xffDF958F);     
 }

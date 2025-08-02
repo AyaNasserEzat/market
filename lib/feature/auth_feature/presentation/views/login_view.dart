@@ -50,7 +50,7 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               CustomButton(onpressed: () {
-                          context.go("/home");  
+                          context.go("/bottom");  
               }, text: AppStrings.login),
               
               SizedBox(height: 20),

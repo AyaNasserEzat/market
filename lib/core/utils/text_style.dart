@@ -13,4 +13,28 @@ class CustomTextStyle {
     fontSize: 16,
     color: AppColor.white,
   );
+
+  static TextStyle regular=TextStyle(
+    fontSize: 14,color: AppColor.gray,
+        fontFamily: 'TitilliumWeb',
+
+  );
+    static TextStyle arial=TextStyle(
+    fontSize: 18,color: AppColor.blue,
+      
+
+  );
+  
+  
+    static TextStyle bold19=TextStyle(
+    fontSize: 19,color: AppColor.black,
+       fontFamily: 'TitilliumWeb',
+  );
+      static TextStyle simebold12=TextStyle(
+    fontSize: 12,color: AppColor.white,
+       fontFamily: 'TitilliumWeb',
+  );
+   static TextStyle poppins=TextStyle(
+    fontSize: 24,color: AppColor.green,fontFamily: "Poppins"
+  );
 }
