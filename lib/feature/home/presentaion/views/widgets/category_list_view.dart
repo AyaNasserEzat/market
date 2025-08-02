@@ -12,7 +12,7 @@ class CategoryListView extends StatelessWidget {
                 
                 return Column(
                   children: [
-                    CustomgategoryContainr(image: "assets/images/تنزيل (16) 1.png"),
+                    CustomgategoryContainr(image: "assets/images/fruits.png"),
                     Text("Frutis")
                   ],
                 );

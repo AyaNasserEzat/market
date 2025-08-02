@@ -6,6 +6,7 @@ import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.d
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/bottom_navigation_bar.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
+import 'package:pure_soft/feature/home/presentaion/views/product_details_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/saller_product_view.dart';
 
 class AppRouter {
@@ -36,6 +37,11 @@ class AppRouter {
         path: "/sallerProduct",
         builder: (context, state) =>  SallerProductView(),
       ),
+
+                           GoRoute(
+        path: "/productDetails",
+        builder: (context, state) =>  ProductDetailsView(),
+      )
     ],
   );
 }

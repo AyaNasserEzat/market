@@ -4,8 +4,9 @@ import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/category_list_view.dart';
 
-import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_container.dart';
+
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_product_container.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/saller_card.dart';
 
 class SallerProductView extends StatelessWidget {
   const SallerProductView({super.key});
@@ -28,7 +29,8 @@ class SallerProductView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomContainer(isOpen: true),
+          //  CustomContainer(isOpen: true),
+          SallerCard(isOpen: true),
             Text("Categories",style: CustomTextStyle.bold19,),
             SizedBox(
               height: 130,

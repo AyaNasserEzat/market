@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
@@ -20,11 +21,11 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
   ];
 
   final List<_NavItemData> navItems = [
-    _NavItemData(icon: Icons.home, label: "Home"),
-    _NavItemData(icon: Icons.list, label: "Categories"),
-    _NavItemData(icon: Icons.shopping_basket, label: "Cart"),
-    _NavItemData(icon: Icons.favorite_border, label: "Favorites"),
-    _NavItemData(icon: Icons.more_horiz, label: "More"),
+    _NavItemData(icon: AppAssetes.homeIcon, selectedIcon: AppAssetes.selectedHome, label: "Home"),
+    _NavItemData(icon: AppAssetes.orderIcon, label: "Categories", selectedIcon: AppAssetes.selectedOrder),
+    _NavItemData(icon: AppAssetes.bassketIon, label: "Cart", selectedIcon: AppAssetes.selectedBasket),
+    _NavItemData(icon: AppAssetes.favorites, label: "Favorites", selectedIcon: AppAssetes.selectedFavorite),
+    _NavItemData(icon: AppAssetes.more, label: "More", selectedIcon: AppAssetes.selectedMore),
   ];
 
   void onTabTapped(int index) {
@@ -66,7 +67,12 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
               ),
               child: Row(
                 children: [
-                  Icon(item.icon, color: Colors.black, size: 20),
+                  
+                  SvgPicture.asset(
+  item.selectedIcon,
+  // اختياري لتغيير اللون
+),
+              
                   SizedBox(width: 6),
                   Text(item.label, style: TextStyle(color: Colors.black)),
                 ],
@@ -74,13 +80,17 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
             )
           : 
           //Image.asset(AppAssetes.homeIcon)
-          Icon(item.icon, color: Colors.white, size: 24),
+       SvgPicture.asset(
+ item.icon,
+ // اختياري لتغيير اللون
+),
     );
   }
 }
 
 class _NavItemData {
-  final IconData icon;
+  final String selectedIcon;
+  String icon;
   final String label;
-  _NavItemData({required this.icon, required this.label});
+  _NavItemData({required this.selectedIcon, required this.icon, required this.label});
 }
