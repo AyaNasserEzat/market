@@ -35,7 +35,7 @@ class CustomTextStyle {
        fontFamily: 'TitilliumWeb',
   );
    static TextStyle poppins=TextStyle(
-    fontSize: 24,color: AppColor.green,fontFamily: "Poppins"
+    fontSize: 24,color: AppColor.green,fontFamily: "Poppins",fontWeight: FontWeight.w700
   );
      static TextStyle TitilliumWebBold16=TextStyle(
     fontSize: 16,color: AppColor.green,fontFamily: "TitilliumWeb"

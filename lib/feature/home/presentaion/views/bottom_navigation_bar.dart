@@ -4,6 +4,7 @@ import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/cart_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
+import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
 
 class BottomNavigationBar extends StatefulWidget {
   @override
@@ -14,11 +15,12 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
   int currentIndex = 0;
 
   final List<Widget> pages = [
+    HomeView(),
   HomeView(),
     HomeView(),
  CartView(),
-        HomeView(),
-          HomeView(),
+        ProfileView(),
+          
   ];
 
   final List<_NavItemData> navItems = [

@@ -25,20 +25,22 @@ Icon(        Icons.favorite),
     ),
     body: Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        spacing: 10,
-        children: [
-          StackSection(),
-          ProductNameSection(),
-          SelectWeightSection(),
-          SelectWeightSection(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              AddToCartBtn()
-            ],
-          )
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          spacing: 10,
+          children: [
+            StackSection(),
+            ProductNameSection(),
+            SelectWeightSection(),
+            SelectWeightSection(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                AddToCartBtn()
+              ],
+            )
+          ],
+        ),
       ),
     ),
 

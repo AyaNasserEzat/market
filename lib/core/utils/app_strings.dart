@@ -32,4 +32,12 @@ class AppStrings {
     static const String submit = 'Submit';
         static const String basket = 'Basket';
             static const String checkOut = 'Procced to Checkout';
+
+              static const String profile = 'Profile';
+  static const String myOrder = 'My Order';
+  static const String favorite = 'Favorite';
+  static const String language = 'Language';
+  static const String support = 'Support';
+  static const String terms = 'Terms & Conditions';
+  static const String aboutUs = 'About Us';
 }
