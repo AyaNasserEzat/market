@@ -19,8 +19,14 @@ class _PhoneWithWhatsapTextFiledState extends State<PhoneWithWhatsapTextFiled> {
           // حقل الهاتف + Dropdown
           Container(
             decoration: BoxDecoration(
-              border: Border.all(color: AppColor.gray),
+            color: AppColor.white,
               borderRadius: BorderRadius.circular(28),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColor.black.withOpacity(.2),
+                  blurRadius: 2
+                )
+              ]
             ),
             padding: EdgeInsets.symmetric(horizontal: 12),
             child: Row(
@@ -41,7 +47,7 @@ class _PhoneWithWhatsapTextFiledState extends State<PhoneWithWhatsapTextFiled> {
                     },
                   ),
                 ),
-                Container(width: 2, color: AppColor.gray,height: 40,),
+                Container(width: .5, color: AppColor.gray,height: 40,),
                 Expanded(
                   child: TextFormField(
                     keyboardType: TextInputType.phone,

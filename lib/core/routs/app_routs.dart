@@ -8,6 +8,8 @@ import 'package:pure_soft/feature/home/presentaion/views/bottom_navigation_bar.d
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/product_details_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/saller_product_view.dart';
+import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
+import 'package:pure_soft/feature/profile/presentation/views/update_profile_view.dart';
 
 class AppRouter {
   static String signUp = "/signUp";
@@ -45,7 +47,15 @@ class AppRouter {
                                  GoRoute(
         path: "/cart",
         builder: (context, state) =>  ProductDetailsView(),
-      )
+      ),
+       GoRoute(
+        path: "/updateProfile",
+        builder: (context, state) => const UpdateProfileView(),
+      ),
+       GoRoute(
+        path: "/profile",
+        builder: (context, state) => const ProfileView(),
+      ),
     ],
   );
 }

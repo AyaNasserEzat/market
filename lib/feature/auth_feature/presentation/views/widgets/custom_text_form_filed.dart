@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
-
 class CustomTextFormFiled extends StatelessWidget {
   const CustomTextFormFiled({super.key, required this.text});
-final String text;
+  final String text;
   @override
   Widget build(BuildContext context) {
-    return  TextField(
-      decoration: InputDecoration(
-        hintText:  text,
-        
-    
-        border: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColor.gray),
-          borderRadius: BorderRadius.all(Radius.circular(28))
+    return Container(
+      padding: EdgeInsets.only(left: 16),
+      decoration: BoxDecoration(
+        color: AppColor.white,
+        borderRadius: BorderRadius.circular(28),
+
+        boxShadow: [
+          BoxShadow(blurRadius: 2, color: AppColor.black.withOpacity(.2)),
+        ],
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+          hintText: text,
+
+          border: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          focusedBorder: InputBorder.none,
+
+         
         ),
-        focusedBorder:OutlineInputBorder(
-        borderSide: BorderSide(color: AppColor.gray),
-          borderRadius: BorderRadius.all(Radius.circular(28))
-        ),
-        enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColor.gray),
-          borderRadius: BorderRadius.all(Radius.circular(28))
-        ), 
-        
       ),
     );
   }
