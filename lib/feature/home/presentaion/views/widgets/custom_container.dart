@@ -11,7 +11,7 @@ class CustomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.go("/sallerProduct");
+        context.push("/sallerProduct");
       },
       child: Container(
         width: 412.w,

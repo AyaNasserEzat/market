@@ -31,7 +31,7 @@ class ProfileBody extends StatelessWidget {
       imageurl: AppAssetes.iconUser,
       title: AppStrings.profile,
       onPressed: () {
-        context.go('/updateProfile');
+        context.push('/updateProfile');
       },
     ),
     ProfileItemListTile(
@@ -52,12 +52,16 @@ class ProfileBody extends StatelessWidget {
     ProfileItemListTile(
       imageurl: AppAssetes.support,
       title: AppStrings.support,
-      onPressed: () {},
+      onPressed: () {
+        context.push("/support");
+      },
     ),
     ProfileItemListTile(
       imageurl: AppAssetes.terms,
       title: AppStrings.terms,
-      onPressed: () {},
+      onPressed: () {
+        context.push("/termAndCondation");
+      },
     ),
     ProfileItemListTile(
       imageurl: AppAssetes.about,

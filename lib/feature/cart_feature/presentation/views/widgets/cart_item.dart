@@ -10,7 +10,7 @@ class CartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
           width: 412.w,
-          height: 104.h,
+          height: 115.h,
           decoration: BoxDecoration(
             color: AppColor.white,
             borderRadius: BorderRadius.circular(24),

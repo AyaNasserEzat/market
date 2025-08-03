@@ -4,11 +4,14 @@ import 'package:pure_soft/feature/auth_feature/presentation/views/login_view.dar
 import 'package:pure_soft/feature/auth_feature/presentation/views/otp_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
+import 'package:pure_soft/feature/favorite_feature/presentation/views/favorite_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/bottom_navigation_bar.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/product_details_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/saller_product_view.dart';
 import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
+import 'package:pure_soft/feature/profile/presentation/views/support_view.dart';
+import 'package:pure_soft/feature/profile/presentation/views/term_and_condation.dart';
 import 'package:pure_soft/feature/profile/presentation/views/update_profile_view.dart';
 
 class AppRouter {
@@ -55,6 +58,18 @@ class AppRouter {
        GoRoute(
         path: "/profile",
         builder: (context, state) => const ProfileView(),
+      ),
+             GoRoute(
+        path: "/support",
+        builder: (context, state) => const SupportView(),
+      ),
+                   GoRoute(
+        path: "/termAndCondation",
+        builder: (context, state) => const TermAndCondation(),
+      ),
+                         GoRoute(
+        path: "/favorit",
+        builder: (context, state) => const FavoriteView(),
       ),
     ],
   );

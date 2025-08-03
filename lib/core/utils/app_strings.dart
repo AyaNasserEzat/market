@@ -40,4 +40,8 @@ class AppStrings {
   static const String support = 'Support';
   static const String terms = 'Terms & Conditions';
   static const String aboutUs = 'About Us';
+    static const String contactUs = 'Contact Us';
+     static const String message = 'Message';
+       static const String termAndCondation = 'Terms and Condations';
+        static const String favorit = 'Favorit  ';
 }

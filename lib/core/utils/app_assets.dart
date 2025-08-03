@@ -24,4 +24,10 @@ class AppAssetes {
   static const String about = 'assets/images/about_us_icon.svg';
 
 
+    static const String phoneIcon = 'assets/images/phone_icon.svg';
+  static const String youtubeIcon = 'assets/images/youtube_icon.svg';
+  static const String instagramIcon = 'assets/images/instagram_icon.svg';
+    static const String facbookIcon = 'assets/images/facbook_icon.svg';
+
+
 }

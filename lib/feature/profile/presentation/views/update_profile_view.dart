@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
@@ -15,7 +16,9 @@ class UpdateProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:  IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+        leading:  IconButton(onPressed: () {
+          context.pop();
+        }, icon: Icon(Icons.arrow_back_ios)),
       ),
       body: SingleChildScrollView(
         child: Padding(
