@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/cart_list_view.dart';
-import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/cart_item.dart';
+
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/checkout_section.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/prossed_to_checkout_section.dart';
 
@@ -29,7 +30,7 @@ class CartView extends StatelessWidget {
        CartListView(),
       
             CheckoutSection(),
-            SizedBox(height: 30,),
+            SizedBox(height: 30.h,),
             ProssedToCheckoutSection()
         
           ],

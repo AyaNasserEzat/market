@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -21,17 +22,17 @@ class ForgetPasswordView extends StatelessWidget {
               spacing: 10,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 24),
+                 SizedBox(height: 24.h),
                 AuthHeader(text: AppStrings.signUpTitle),
-                const SizedBox(height: 32),
+                 SizedBox(height: 32.h),
        
   CustomRow(text: "Phone"),
 PhoneWithWhatsapTextFiled(),
-                const SizedBox(height: 16),
+                 SizedBox(height: 16.h),
                 CustomButton(text: AppStrings.submit, onpressed: () {
               context.go("/otp");
                 },),
-                SizedBox(height: 20,),
+                SizedBox(height: 20.h,),
          
               ],
             ),

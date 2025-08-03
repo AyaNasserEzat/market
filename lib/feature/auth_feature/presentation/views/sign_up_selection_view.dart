@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -16,19 +17,21 @@ class SignUpSelectionView extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            spacing: 10,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AuthHeader(text: AppStrings.welcomeMessage,),
-              SizedBox(height: 20),
-              LoginButtonSection(),
-              AlearduMemberText(text: AppStrings.alreadyMember,text2: AppStrings.signIn,onPressed: (){
-                context.go("/login");
-              },),
-              SizedBox(height: 40),
-              AgreementText(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: 10,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AuthHeader(text: AppStrings.welcomeMessage,),
+                SizedBox(height: 20.h),
+                LoginButtonSection(),
+                AlearduMemberText(text: AppStrings.alreadyMember,text2: AppStrings.signIn,onPressed: (){
+                  context.go("/login");
+                },),
+                SizedBox(height: 40.h),
+                AgreementText(),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
@@ -12,7 +13,7 @@ final  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading:SvgPicture.asset(imageurl,width: 18,height: 21,) ,
+      leading:SvgPicture.asset(imageurl,width: 18.w,height: 21.h,) ,
       title: Text(title),
       trailing: IconButton(icon: Icon( Icons.arrow_forward_ios,color: AppColor.gray,size: 15,),onPressed:onPressed ,),
     );

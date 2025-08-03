@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
-import 'package:pure_soft/core/utils/app_strings.dart';
+
 import 'package:pure_soft/core/utils/text_style.dart';
 
 class ProssedToCheckoutSection extends StatelessWidget {
@@ -19,10 +20,10 @@ class ProssedToCheckoutSection extends StatelessWidget {
           ],
 
         ),
-          // CustomButton(onpressed: (){}, text: "hh",width: 181,height: 37,)
+          // CustomButton(onpressed: (){}, text: "hh",width: 181.w,height: 37.h,)
           SizedBox(
-      width: 181,
-      height: 38,
+      width: 181.w,
+      height: 38.h,
       child: ElevatedButton(
         onPressed: (){},
         style: ElevatedButton.styleFrom(

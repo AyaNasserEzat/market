@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class StackSection extends StatelessWidget {
@@ -15,7 +16,7 @@ Container(
     borderRadius: BorderRadius.circular(30),
       color: AppColor.gray,
   ),
-  width: 388,height: 232,
+  width: 388.w,height: 232.h,
   child: ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset('assets/images/fruits.png',fit: BoxFit.fill,), // بدليه بالصورة المناسبة
@@ -25,8 +26,8 @@ Container(
           top: 10,
           right: 10,
           child: Container(
-            height: 29,
-            width: 120,
+            height: 29.h,
+            width: 120.w,
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
               color: AppColor.pink,
@@ -34,7 +35,7 @@ Container(
             ),
             child: Text(
               "10% Off Discount",
-              style: TextStyle(color: Colors.white, fontSize: 12),
+              style: TextStyle(color: Colors.white, fontSize: 12.sp),
             ),
           ),
         ),

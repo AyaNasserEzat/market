@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -25,10 +26,10 @@ class HomeView extends StatelessWidget {
           child: Column(
             children: [
               Divider(color: AppColor.gray),
-              Image.asset(AppAssetes.homeImage, width: 400, height: 130),
-              SizedBox(height: 10),
+              Image.asset(AppAssetes.homeImage, width: 400.w, height: 130.h),
+              SizedBox(height: 10.h),
               SizedBox(
-                height: 90,
+                height: 90.h,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
@@ -50,12 +51,12 @@ class HomeView extends StatelessWidget {
                 ),
               ),
               // SizedBox(
-              //   height: 400,
+              //   height: 400.h,
               //   child: ListView.separated(
               //     itemCount: 4,
               //     itemBuilder: (context,index){
               //     return   CustomContainer(isOpen: true,);
-              //   }, separatorBuilder: (BuildContext context, int index) { return SizedBox(height: 15,); },),
+              //   }, separatorBuilder: (BuildContext context, int index) { return SizedBox(height: 15.h,); },),
               // )
            CustomContainer(isOpen: true,)
             ],

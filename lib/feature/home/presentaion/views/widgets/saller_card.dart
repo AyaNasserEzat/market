@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
@@ -17,7 +18,7 @@ final bool isOpen;
         title:Text("saller name",style: CustomTextStyle.bold19,) ,
         leading: Container(
   decoration: BoxDecoration(
-border: Border.all(color: AppColor.gray,width: 2),
+border: Border.all(color: AppColor.gray,width: 2.w),
 shape: BoxShape.circle,
     boxShadow: [
       BoxShadow(

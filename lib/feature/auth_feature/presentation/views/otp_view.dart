@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -21,19 +22,19 @@ class OtpView extends StatelessWidget {
               spacing: 10,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 24),
+                 SizedBox(height: 24.h),
                 AuthHeader(text: AppStrings.enterOtp),
-                const SizedBox(height: 32),
+                 SizedBox(height: 32.h),
   
 PinCodeFields(),
-SizedBox(height: 20,),
+SizedBox(height: 20.h,),
            
                 CustomButton(text: AppStrings.confirm, onpressed: () {
               
                 },),
-                     const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                      
-            Text("60",style: TextStyle(color: AppColor.gray2,fontSize: 28),),
+            Text("60",style: TextStyle(color: AppColor.gray2,fontSize: 28.sp),),
             AlearduMemberText(text: AppStrings.notReceived, text2: AppStrings.sendAgain, onPressed: (){})
               ],
             ),

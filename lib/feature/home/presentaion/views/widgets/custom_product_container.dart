@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
@@ -13,8 +14,8 @@ class CustomProductContainer extends StatelessWidget {
         context.push("/productDetails");
       },
       child: Container(
-          width: 412,
-          height: 104,
+          width: 412.w,
+          height: 104.h,
           decoration: BoxDecoration(
             color: AppColor.white,
             borderRadius: BorderRadius.circular(24),
@@ -50,8 +51,8 @@ class CustomProductContainer extends StatelessWidget {
         
                Container(
                 
-                width: 102,
-                height: 22,
+                width: 102.w,
+                height: 22.h,
                 decoration: BoxDecoration(
                   color: AppColor.pink,
                   borderRadius: BorderRadius.circular(50)
@@ -60,7 +61,7 @@ class CustomProductContainer extends StatelessWidget {
                )
                   ],
                 ),
-                SizedBox(width: 15,),
+                SizedBox(width: 15.w,),
                 Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.center,

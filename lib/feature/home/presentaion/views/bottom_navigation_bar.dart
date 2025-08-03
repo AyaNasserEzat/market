@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
@@ -43,7 +44,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
       body: pages[currentIndex],
     
       bottomNavigationBar: Container(
-        height: 60,
+        height: 60.h,
         decoration: BoxDecoration(
           color: AppColor.green,
           borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30)),
@@ -76,7 +77,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
   // اختياري لتغيير اللون
 ),
               
-                  SizedBox(width: 6),
+                  SizedBox(width: 6.w),
                   Text(item.label, style: TextStyle(color: Colors.black)),
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
@@ -13,8 +14,8 @@ class CustomContainer extends StatelessWidget {
         context.go("/sallerProduct");
       },
       child: Container(
-        width: 412,
-        height: 104,
+        width: 412.w,
+        height: 104.h,
         decoration: BoxDecoration(
           color: AppColor.white,
           borderRadius: BorderRadius.circular(24),
@@ -69,7 +70,7 @@ class CustomContainer extends StatelessWidget {
                   Text("4.5"),
                   Row(
                     children: [
-                      Text("23 KM ",style: CustomTextStyle.arial.copyWith(fontSize: 12,color: AppColor.green),),
+                      Text("23 KM ",style: CustomTextStyle.arial.copyWith(fontSize: 12.sp,color: AppColor.green),),
           
                       Icon(Icons.location_on_rounded,size: 12,),
                     ],

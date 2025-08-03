@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_assets.dart' show AppAssetes;
 import 'package:pure_soft/core/utils/app_color.dart';
@@ -19,11 +20,11 @@ class ProfileBody extends StatelessWidget {
       child: Column(
         children: [
           Divider(color: AppColor.gray, thickness: 1),
-          SizedBox(height: 25),
+          SizedBox(height: 25.h),
           ProfileImage(),
-          SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text("Welcom, Fruit Market", style: CustomTextStyle.bold19),
-          SizedBox(height: 24),
+          SizedBox(height: 24.h),
           CustomButton(onpressed: () {}, text: 'Login'),
          
          ProfileItemListTile(

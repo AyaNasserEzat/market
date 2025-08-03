@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -23,12 +24,12 @@ class UpdateProfileView extends StatelessWidget {
             
             children: [
             
-              SizedBox(height: 45),
+              SizedBox(height: 45.h),
               Stack(
                 children: [
                   Container(
-                    width: 80,
-                    height: 80,
+                    width: 80.w,
+                    height: 80.h,
           
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -40,25 +41,25 @@ class UpdateProfileView extends StatelessWidget {
                     right: 4,
                     child: SvgPicture.asset(
                       'assets/images/camera.svg',
-                      width: 24,
-                      height: 30,
+                      width: 24.w,
+                      height: 30.h,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 10.h),
               Text("Welcom, Alaa", style: CustomTextStyle.bold19),
-              SizedBox(height:10),
+              SizedBox(height: 10.h),
               CustomRow(text: AppStrings.Name),
-              SizedBox(height:10),
+              SizedBox(height: 10.h),
               CustomTextFormFiled(text: AppStrings.Name),
-              SizedBox(height:10),
+              SizedBox(height: 10.h),
               CustomRow(text: AppStrings.mobileNumberWithWhatspp),
-          SizedBox(height:10),
+          SizedBox(height: 10.h),
               PhoneWithWhatsapTextFiled(),
-              SizedBox(height:10),
+              SizedBox(height: 10.h),
               CustomRow(text: AppStrings.password),
-              SizedBox(height:10),
+              SizedBox(height: 10.h),
               CustomTextFormFiled(text: AppStrings.password),
             ],
           ),

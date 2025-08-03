@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/routs/app_routs.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
@@ -26,7 +27,7 @@ class LoginView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AuthHeader(text: AppStrings.welcomeMessage),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               CustomRow(text: AppStrings.mobileNumberWithWhatspp),
         
               PhoneWithWhatsapTextFiled(),
@@ -53,7 +54,7 @@ class LoginView extends StatelessWidget {
                           context.go("/bottom");  
               }, text: AppStrings.login),
               
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               AlearduMemberText(
                 text: AppStrings.dontHaveAccount,
                 text2: AppStrings.signUp,

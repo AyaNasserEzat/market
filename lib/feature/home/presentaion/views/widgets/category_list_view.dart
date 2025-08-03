@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_category_containr.dart';
 
 class CategoryListView extends StatelessWidget {
@@ -17,7 +18,7 @@ class CategoryListView extends StatelessWidget {
                   ],
                 );
               }, separatorBuilder: (context,index){
-                return SizedBox(width: 10,);
+                return SizedBox(width: 10.w,);
               }, itemCount: 4);
   }
 }

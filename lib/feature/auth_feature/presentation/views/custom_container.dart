@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class CustomContainer extends StatelessWidget {
@@ -14,8 +15,8 @@ class CustomContainer extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         
-        height: 51,
-        width: 347,
+        height: 51.h,
+        width: 347.w,
         decoration: BoxDecoration(
           color: color,
           border: Border.all(color: AppColor.gray,width: .5),
@@ -28,7 +29,7 @@ class CustomContainer extends StatelessWidget {
         Container(
           child: widget,
         ),
-            SizedBox(width: 10,),
+            SizedBox(width: 10.w,),
             Text(text,style: TextStyle(color: textcolor),)
           ],
         ),

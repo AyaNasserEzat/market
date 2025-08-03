@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 
@@ -8,8 +9,8 @@ class CartItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-          width: 412,
-          height: 104,
+          width: 412.w,
+          height: 104.h,
           decoration: BoxDecoration(
             color: AppColor.white,
             borderRadius: BorderRadius.circular(24),
@@ -45,8 +46,8 @@ class CartItem extends StatelessWidget {
         
                Container(
                 
-                width: 102,
-                height: 22,
+                width: 102.w,
+                height: 22.h,
                 decoration: BoxDecoration(
                   color: AppColor.pink,
                   borderRadius: BorderRadius.circular(50)
@@ -55,7 +56,7 @@ class CartItem extends StatelessWidget {
                )
                   ],
                 ),
-                SizedBox(width: 15,),
+                SizedBox(width: 15.w,),
                 Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,8 +64,8 @@ class CartItem extends StatelessWidget {
 IconButton(onPressed: (){}, icon: Icon(Icons.delete_forever),),
  Container(
                 
-                width: 126,
-                height: 29,
+                width: 126.w,
+                height: 29.h,
                 decoration: BoxDecoration(
                   color: AppColor.white,
                   borderRadius: BorderRadius.circular(50),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class CustomgategoryContainr extends StatelessWidget {
@@ -20,8 +21,8 @@ final String image;
         ),
          ]
         ),
-        width: 80,
-        height: 80,
+        width: 80.w,
+        height: 80.h,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(23),
           child: Image.asset(

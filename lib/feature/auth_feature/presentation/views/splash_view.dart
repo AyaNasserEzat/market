@@ -29,13 +29,15 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.green,
-      body:Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-  Image.asset("assets/images/6666666666 copy 1.png",width: 441.w,height: 223.h,),
- SizedBox(height: 160,),
-  Image.asset("assets/images/343434 1.png",width: 441.75,height: 314.61,)
-        ],
+      body:SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          Image.asset("assets/images/6666666666 copy 1.png",width: 441.w.w,height: 223.h.h,),
+         SizedBox(height: 190.h,),
+          Image.asset("assets/images/343434 1.png",width: 441.75.w,height: 314.61.h,)
+          ],
+        ),
       )
     );
   }

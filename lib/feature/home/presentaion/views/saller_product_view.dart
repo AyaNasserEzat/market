@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
@@ -33,7 +34,7 @@ class SallerProductView extends StatelessWidget {
           SallerCard(isOpen: true),
             Text("Categories",style: CustomTextStyle.bold19,),
             SizedBox(
-              height: 130,
+              height: 130.h,
               
               child: CategoryListView()
             ),

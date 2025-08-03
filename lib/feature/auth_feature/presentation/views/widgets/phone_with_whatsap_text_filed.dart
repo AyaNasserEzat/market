@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class PhoneWithWhatsapTextFiled extends StatefulWidget {
@@ -47,7 +48,7 @@ class _PhoneWithWhatsapTextFiledState extends State<PhoneWithWhatsapTextFiled> {
                     },
                   ),
                 ),
-                Container(width: .5, color: AppColor.gray,height: 40,),
+                Container(width: .5, color: AppColor.gray,height: 40.h,),
                 Expanded(
                   child: TextFormField(
                     keyboardType: TextInputType.phone,

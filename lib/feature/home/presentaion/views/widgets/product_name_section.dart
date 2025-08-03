@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 
@@ -15,7 +16,7 @@ class ProductNameSection extends StatelessWidget {
           children: [
             Text(
               "category name",
-              style: CustomTextStyle.bold19.copyWith(fontSize: 16),
+              style: CustomTextStyle.bold19.copyWith(fontSize: 16.sp),
             ),
            
           ],
@@ -25,7 +26,7 @@ class ProductNameSection extends StatelessWidget {
           children: [
             Text(
               "product name",
-              style: CustomTextStyle.bold19.copyWith(fontSize: 23),
+              style: CustomTextStyle.bold19.copyWith(fontSize: 23.sp),
             ),
             Text.rich(
               TextSpan(
@@ -34,7 +35,7 @@ class ProductNameSection extends StatelessWidget {
                   TextSpan(
                     text: "KD 14.00",
                     style: CustomTextStyle.regular.copyWith(
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       color: AppColor.pink,
                       decoration: TextDecoration.lineThrough,
                     ),
