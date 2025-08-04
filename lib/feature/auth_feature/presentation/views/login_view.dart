@@ -26,11 +26,11 @@ class LoginView extends StatelessWidget {
             spacing: 10,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AuthHeader(text: AppStrings.welcomeMessage),
+              AuthHeader(text: AppStrings.logintoWikala),
               SizedBox(height: 20.h),
               CustomRow(text: AppStrings.mobileNumberWithWhatspp),
         
-              PhoneWithWhatsapTextFiled(),
+             PhoneWithWhatsapTextFiled(),
               CustomRow(text: AppStrings.password),
               CustomTextFormFiled(text: AppStrings.password),
               GestureDetector(

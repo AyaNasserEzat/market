@@ -12,6 +12,7 @@ class AppStrings {
   static const String privacyPolicy = "our Privacy Policy";
   static const String continueAgreement = "By continuing you agree ";
   static const String and = " and ";
+    static const String logintoWikala = "login to Wikala ";
 
   static const String signUpTitle = "Sign Up to Wikala";
   static const String fullName = "First and Last Name";

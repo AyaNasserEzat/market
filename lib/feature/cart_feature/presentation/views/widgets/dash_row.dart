@@ -6,14 +6,17 @@ class DashRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Row(
-  children: List.generate(45, (index) {
-    return Container(
-      width: 6.w,
-      height: 1.h,
-      margin: const EdgeInsets.symmetric(horizontal: 2),
-      color: Colors.grey,
+    return   Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: List.generate(36, (index) {
+      return Container(
+        width: 6.w,
+        height: 1.h,
+        margin: const EdgeInsets.symmetric(horizontal: 2),
+        color: Colors.grey,
+      );
+        })),
     );
-  }));
   }
 }

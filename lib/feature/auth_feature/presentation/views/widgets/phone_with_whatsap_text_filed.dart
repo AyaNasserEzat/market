@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class PhoneWithWhatsapTextFiled extends StatefulWidget {
-  const PhoneWithWhatsapTextFiled({super.key});
+   PhoneWithWhatsapTextFiled({super.key});
+  String selectedCode = 'KW';
 
+  final List<String> countryCodes = ['KW', 'EG', 'SA', 'AE'];
   @override
   State<PhoneWithWhatsapTextFiled> createState() => _PhoneWithWhatsapTextFiledState();
 }
 
 class _PhoneWithWhatsapTextFiledState extends State<PhoneWithWhatsapTextFiled> {
-  String selectedCode = 'KW';
 
-  final List<String> countryCodes = ['KW', 'EG', 'SA', 'AE'];
 
   @override
   Widget build(BuildContext context) {
@@ -31,24 +31,25 @@ class _PhoneWithWhatsapTextFiledState extends State<PhoneWithWhatsapTextFiled> {
             ),
             padding: EdgeInsets.symmetric(horizontal: 12),
             child: Row(
-              children: [
-                DropdownButtonHideUnderline(
-                  child: DropdownButton<String>(
-                    value: selectedCode,
-                    items: countryCodes.map((code) {
-                      return DropdownMenuItem(
-                        value: code,
-                        child: Text(code),
-                      );
-                    }).toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        selectedCode = value!;
-                      });
-                    },
-                  ),
-                ),
-                Container(width: .5, color: AppColor.gray,height: 40.h,),
+        children: [
+          PopupMenuButton<String>(
+            icon: Icon(Icons.keyboard_arrow_down, size: 32, color: AppColor.gray),
+            onSelected: (String newValue) {
+              setState(() {
+                widget.selectedCode = newValue;
+              });
+            },
+            itemBuilder: (BuildContext context) {
+              return widget.countryCodes.map((String code) {
+                return PopupMenuItem<String>(value: code, child: Text(code));
+              }).toList();
+            },
+          ),
+          Text(widget.selectedCode),
+          SizedBox(width: 10),
+          Container(width: .3, height: 40, color: AppColor.gray),
+
+          const SizedBox(width: 8),
                 Expanded(
                   child: TextFormField(
                     keyboardType: TextInputType.phone,

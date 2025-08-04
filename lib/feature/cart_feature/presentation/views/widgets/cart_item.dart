@@ -19,9 +19,10 @@ class CartItem extends StatelessWidget {
             ],
           ),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 8.0,bottom: 8),
             child: Row(
-              spacing: 10,
+              crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 5,
               children: [
                 CircleAvatar(radius: 35),
                 Column(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/routs/app_routs.dart';
+import 'package:pure_soft/core/utils/app_color.dart';
 
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
        routerConfig: AppRouter.router,
+       theme: ThemeData(appBarTheme: AppBarTheme(color: AppColor.white),scaffoldBackgroundColor: AppColor.white),
        
          
       ),

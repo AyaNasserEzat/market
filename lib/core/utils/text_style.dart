@@ -5,9 +5,10 @@ import 'package:pure_soft/core/utils/app_color.dart';
 
 class CustomTextStyle {
   static TextStyle logo = TextStyle(
-    fontSize: 28.sp,
+    fontSize: 40.sp,
     fontWeight: FontWeight.bold,
     color: AppColor.green,
+    fontFamily: "Poppins"
   );
 
   static TextStyle medianstyle = TextStyle(

@@ -15,31 +15,36 @@ class _PinCodeFieldsState extends State<PinCodeFields> {
   Widget build(BuildContext context) {
     return  
 PinCodeTextField(
-  appContext: context,
-  enableActiveFill: true,
-  length: 4,
-  obscureText: true, // يخلي التكست يظهر كنقطة ●
-  obscuringCharacter: '●',
-  animationType: AnimationType.fade,
-  keyboardType: TextInputType.number,
-  pinTheme: PinTheme(
-    shape: PinCodeFieldShape.circle, // شكل دائري
-    fieldHeight: 60.h,
-    fieldWidth: 60.w,
-    activeColor: AppColor.black,
-    selectedColor: AppColor.black,
-    inactiveColor: AppColor.black,
-    inactiveFillColor: AppColor.gray,
-    activeFillColor: AppColor.gray2,
-    activeBorderWidth: 1.w,
-    inactiveBorderWidth: 1.w
-  ),
-  onChanged: (value) {
-    print(value);
-  },
-  onCompleted: (value) {
-    print("Completed: $value");
-  },
-);
+                  appContext: context,
+                  length: 4,
+                  obscureText: true,
+                  animationType: AnimationType.fade,
+                  pinTheme: PinTheme(
+                    shape: PinCodeFieldShape.circle,
+                    borderRadius: BorderRadius.circular(5),
+                    fieldHeight: 55,
+                    fieldWidth: 55,
+                    activeFillColor: AppColor.grayf9,
+                    inactiveFillColor: const Color(0xFFF0F0F0),
+                    selectedFillColor: AppColor.grayf9,
+                    activeColor: AppColor.gray,
+                    selectedColor: AppColor.gray,
+                    inactiveColor: Colors.grey,
+                    borderWidth: 90
+                    
+                  ),
+                  animationDuration: Duration(milliseconds: 300),
+                  backgroundColor: Colors.transparent,
+                  enableActiveFill: true,
+                  textStyle: TextStyle(
+                    color: AppColor.gray
+                  ),
+                  onCompleted: (v) {
+                    print("Completed: $v");
+                  },
+                  onChanged: (value) {
+                    print(value);
+                  },
+                );
   }
 }

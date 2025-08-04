@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
+import 'package:pure_soft/core/utils/text_style.dart';
 
 class AuthHeader extends StatelessWidget {
   const AuthHeader({super.key, required this.text});
@@ -11,11 +12,7 @@ final String text;
       children: [
               Text(
                 "Fruit Market",
-                style: TextStyle(
-                  fontSize: 28.sp,
-                  fontWeight: FontWeight.bold,
-                  color: AppColor.green,
-                ),
+                style: CustomTextStyle.logo
               ),
               SizedBox(height: 20.h,),
               Text(
