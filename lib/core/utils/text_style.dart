@@ -21,6 +21,12 @@ class CustomTextStyle {
         fontFamily: 'TitilliumWeb',
 
   );
+    static TextStyle regularBold=TextStyle(
+    fontSize: 18.sp,color: AppColor.grey65,
+    fontWeight: FontWeight.bold,
+        fontFamily: 'TitilliumWeb',
+
+  );
     static TextStyle arial=TextStyle(
     fontSize: 18.sp,color: AppColor.blue,
       

@@ -36,6 +36,8 @@ class AppStrings {
 
               static const String profile = 'Profile';
   static const String myOrder = 'My Order';
+    static const String cancleOrder = 'Cancle Order';
+    static const String orderTraking = 'Order Traking';
   static const String favorite = 'Favorite';
   static const String language = 'Language';
   static const String support = 'Support';

@@ -9,6 +9,7 @@ import 'package:pure_soft/feature/home/presentaion/views/bottom_navigation_bar.d
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/product_details_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/saller_product_view.dart';
+import 'package:pure_soft/feature/order_feature/presentaion/views/order_traking_view.dart';
 import 'package:pure_soft/feature/order_feature/presentaion/views/order_view.dart';
 import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
 import 'package:pure_soft/feature/profile/presentation/views/support_view.dart';
@@ -75,6 +76,10 @@ class AppRouter {
                          GoRoute(
         path: "/order",
         builder: (context, state) => const OrderView(),
+      ),
+           GoRoute(
+        path: "/orderTraking",
+        builder: (context, state) => const OrderTrakingView(),
       ),
     ],
   );

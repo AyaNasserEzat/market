@@ -22,7 +22,7 @@ class OrderView extends StatelessWidget {
         (BuildContext context, int index) {
           return OrderItem();
         },
-        childCount: 10,
+        childCount: 1,
       ),
     ),
   ],
