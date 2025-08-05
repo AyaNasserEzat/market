@@ -3,6 +3,7 @@ import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_button.dart';
+import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/cancle_order_dialog.dart';
 import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/order_detalis_section.dart';
 import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/time_line_list.dart';
 
@@ -56,7 +57,11 @@ class OrderTrakingView extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
               child: CustomButton(
-                onpressed: () {},
+                onpressed: () {
+                showDialog(context: context, builder: (builder){
+return CancleOrderDialog();
+                });
+                },
                 text: AppStrings.cancleOrder,
                 color: AppColor.red,
               ),

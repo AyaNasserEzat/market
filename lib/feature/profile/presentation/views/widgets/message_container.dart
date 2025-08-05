@@ -4,13 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class MessageContainer extends StatelessWidget {
-  const MessageContainer({super.key});
-
+  const MessageContainer({super.key, required this.height});
+final double height;
   @override
   Widget build(BuildContext context) {
     return  Container(
-      //width: 347.w,
-      height: 110.h,
+      width: 400.w,
+      height: height,
       padding: EdgeInsets.only(left: 16),
       decoration: BoxDecoration(
         color: AppColor.white,

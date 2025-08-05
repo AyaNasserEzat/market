@@ -36,7 +36,7 @@ class SupportView extends StatelessWidget {
           Text(AppStrings.mobileNumber,style: CustomTextStyle.regular,),
           CustomTextFormFiled(text: ""),
             Text(AppStrings.message,style: CustomTextStyle.regular,),
-          MessageContainer(),
+          MessageContainer(height: 110.h,),
           CustomButton(onpressed: (){}, text: AppStrings.submit),
 SizedBox(height: 10.h,),
           ContactRowIcons()

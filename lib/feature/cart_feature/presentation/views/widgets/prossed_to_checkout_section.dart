@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
+import 'package:pure_soft/core/utils/app_strings.dart';
 
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/custom_small_btn.dart';
 
 class ProssedToCheckoutSection extends StatelessWidget {
   const ProssedToCheckoutSection({super.key});
@@ -24,22 +26,7 @@ class ProssedToCheckoutSection extends StatelessWidget {
           SizedBox(
       width: 181.w,
       height: 38.h,
-      child: ElevatedButton(
-        onPressed: (){},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.green,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25),
-          ),
-          
-        ),
-        child: Row(
-          children: [
-      
-            Text("  Procced to checkout", style: CustomTextStyle.simebold12),
-          ],
-        ),
-      ),
+      child: CustomSmallBtn(text: AppStrings.checkOut)
     )
       ],
     );
