@@ -6,11 +6,13 @@ import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/cart_view.dart';
 import 'package:pure_soft/feature/favorite_feature/presentation/views/favorite_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
-import 'package:pure_soft/feature/order_feature/presentaion/views/order_view.dart';
-import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/time_line.dart';
+import 'package:pure_soft/feature/order_feature/presentaion/views/order_traking_view.dart';
+
 import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
 
 class BottomNavigationBar extends StatefulWidget {
+  const BottomNavigationBar({super.key});
+
   @override
   State<BottomNavigationBar> createState() => _BottomNavigationBarState();
 }
@@ -20,7 +22,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
 
   final List<Widget> pages = [
     HomeView(),
-  TimeLine(),
+  OrderTrakingView(),
   CartView(),
     FavoriteView(),
         ProfileView(),

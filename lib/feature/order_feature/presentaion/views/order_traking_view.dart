@@ -4,6 +4,11 @@ import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_button.dart';
 import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/order_detalis_section.dart';
+import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/time_line_list.dart';
+
+
+
+
 
 
 class OrderTrakingView extends StatelessWidget {
@@ -12,20 +17,55 @@ class OrderTrakingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-                title: Text(AppStrings.orderTraking, style: CustomTextStyle.poppins),
+      appBar: AppBar(
+        title: Text(AppStrings.orderTraking, style: CustomTextStyle.poppins),
         centerTitle: true,
-        leading: IconButton(onPressed: () {
-      
-        }, icon: Icon(Icons.arrow_back_ios)),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.arrow_back_ios),
+        ),
       ),
-      body: Column(
-        spacing: 10,
-        children: [
-          OrderDetalisSection(),
-          CustomButton(onpressed: (){}, text: AppStrings.confirm),
-                CustomButton(onpressed: (){}, text: AppStrings.cancleOrder,color: AppColor.red,),
-          ],
+      body: CustomScrollView(
+        slivers: [
+          // Order Details Section
+          SliverToBoxAdapter(
+            child: OrderDetalisSection(),
+          ),
+
+          // Spacing
+          SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+          // Timeline list
+         TimeLineList(),
+          // Spacing
+          SliverToBoxAdapter(child: SizedBox(height: 24)),
+
+          // Confirm button
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: CustomButton(
+                onpressed: () {},
+                text: AppStrings.confirm,
+              ),
+            ),
+          ),
+
+          // Cancel button
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+              child: CustomButton(
+                onpressed: () {},
+                text: AppStrings.cancleOrder,
+                color: AppColor.red,
+              ),
+            ),
+          ),
+
+          // Extra spacing at bottom
+          SliverToBoxAdapter(child: SizedBox(height: 24)),
+        ],
       ),
     );
   }
