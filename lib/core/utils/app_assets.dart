@@ -7,15 +7,17 @@ class AppAssetes {
   static String more = "assets/images/more.svg";
 
   static String favorites = "assets/images/favorite.svg";
-  static String selectedHome="assets/images/selected_home.svg";
-   static String selectedOrder="assets/images/selected_order.svg";
-    static String selectedBasket="assets/images/selected_basket.svg";
-     static String selectedFavorite="assets/images/selected_faviort.svg";
-      static String selectedMore="assets/images/selected_more.svg";
+  static String selectedHome = "assets/images/selected_home.svg";
+  static String selectedOrder = "assets/images/selected_order.svg";
+  static String selectedBasket = "assets/images/selected_basket.svg";
+  static String selectedFavorite = "assets/images/selected_faviort.svg";
+  static String selectedMore = "assets/images/selected_more.svg";
 
-      static String offer="assets/images/offer.png";
+  static String offer = "assets/images/offer.png";
+   static String ops= "assets/images/ops_image.svg";
+  static String confirmImage= "assets/images/confirm_image.svg";
 
-        static const String iconUser = 'assets/images/Icon feather-user.svg';
+  static const String iconUser = 'assets/images/Icon feather-user.svg';
 
   static const String favorite = 'assets/images/selected_faviort.svg';
   static const String language = 'assets/images/langauge_icon.svg';
@@ -23,11 +25,8 @@ class AppAssetes {
   static const String terms = 'assets/images/terms&condition_icon.svg';
   static const String about = 'assets/images/about_us_icon.svg';
 
-
-    static const String phoneIcon = 'assets/images/phone_icon.svg';
+  static const String phoneIcon = 'assets/images/phone_icon.svg';
   static const String youtubeIcon = 'assets/images/youtube_icon.svg';
   static const String instagramIcon = 'assets/images/instagram_icon.svg';
-    static const String facbookIcon = 'assets/images/facbook_icon.svg';
-
-
+  static const String facbookIcon = 'assets/images/facbook_icon.svg';
 }

@@ -4,9 +4,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/cart_view.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/confirmation_view.dart';
+
 import 'package:pure_soft/feature/favorite_feature/presentation/views/favorite_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
-import 'package:pure_soft/feature/order_feature/presentaion/views/order_traking_view.dart';
+
 
 import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
 
@@ -22,7 +24,8 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
 
   final List<Widget> pages = [
     HomeView(),
-  OrderTrakingView(),
+    ConfirmationView(),
+ // OrderTrakingView(),
   CartView(),
     FavoriteView(),
         ProfileView(),

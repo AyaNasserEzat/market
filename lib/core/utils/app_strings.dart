@@ -33,7 +33,7 @@ class AppStrings {
   static const String submit = 'Submit';
   static const String basket = 'Basket';
   static const String checkOut = 'Procced to Checkout';
-
+static const String checkOutTitle = 'Checkout';
   static const String profile = 'Profile';
   static const String myOrder = 'My Order';
   static const String cancleOrder = 'Cancle Order';
