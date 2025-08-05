@@ -7,6 +7,7 @@ import 'package:pure_soft/feature/cart_feature/presentation/views/cart_view.dart
 import 'package:pure_soft/feature/favorite_feature/presentation/views/favorite_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 import 'package:pure_soft/feature/order_feature/presentaion/views/order_view.dart';
+import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/time_line.dart';
 import 'package:pure_soft/feature/profile/presentation/views/profile_view.dart';
 
 class BottomNavigationBar extends StatefulWidget {
@@ -19,7 +20,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
 
   final List<Widget> pages = [
     HomeView(),
-  OrderView(),
+  TimeLine(),
   CartView(),
     FavoriteView(),
         ProfileView(),
@@ -28,7 +29,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
 
   final List<_NavItemData> navItems = [
     _NavItemData(icon: AppAssetes.homeIcon, selectedIcon: AppAssetes.selectedHome, label: "Home"),
-    _NavItemData(icon: AppAssetes.orderIcon, label: "Categories", selectedIcon: AppAssetes.selectedOrder),
+    _NavItemData(icon: AppAssetes.orderIcon, label: "Orders", selectedIcon: AppAssetes.selectedOrder),
     _NavItemData(icon: AppAssetes.bassketIon, label: "Cart", selectedIcon: AppAssetes.selectedBasket),
     _NavItemData(icon: AppAssetes.favorites, label: "Favorites", selectedIcon: AppAssetes.selectedFavorite),
     _NavItemData(icon: AppAssetes.more, label: "More", selectedIcon: AppAssetes.selectedMore),
