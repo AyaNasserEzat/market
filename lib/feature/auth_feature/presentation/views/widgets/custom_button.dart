@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
+   CustomButton({
     super.key,
     required this.onpressed,
     required this.text,

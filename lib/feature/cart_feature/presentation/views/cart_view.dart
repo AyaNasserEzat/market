@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/cart_list.dart';
@@ -22,19 +22,16 @@ class CartView extends StatelessWidget {
         ),
  
     ),
-    body: SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-       CartListView(),
-      
-            CheckoutSection(),
-            SizedBox(height: 30.h,),
-            ProssedToCheckoutSection()
-        
-          ],
-        ),
+    body:  Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CustomScrollView(
+        slivers: [
+      const CartListView(), 
+        SliverToBoxAdapter(child: SizedBox(height: 150)),
+      SliverToBoxAdapter(child: CheckoutSection()),
+      SliverToBoxAdapter(child: SizedBox(height: 30)),
+      SliverToBoxAdapter(child: ProssedToCheckoutSection()),
+        ],
       ),
     ),
     );

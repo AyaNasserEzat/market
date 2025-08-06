@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/dash_row.dart';
 
@@ -21,7 +22,7 @@ class CheckoutSection extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "35.00",
-                    style: CustomTextStyle.regular.copyWith(fontSize: 12.sp),
+                    style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 21.sp,color: AppColor.gray),
                   ),
                   TextSpan(
                     text: "KD",

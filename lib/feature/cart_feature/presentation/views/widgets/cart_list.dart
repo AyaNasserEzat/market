@@ -7,16 +7,15 @@ class CartListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 350.h,
-      child: ListView.separated(
-        itemBuilder: (BuildContext context, int index) {
-          return CartItem();
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          return Padding(
+            padding: EdgeInsets.only(bottom: 10.h),
+            child: const CartItem(),
+          );
         },
-        separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(height: 10.h,);
-        },
-        itemCount: 2,
+        childCount: 3,
       ),
     );
   }
