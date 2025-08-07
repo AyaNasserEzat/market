@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:pure_soft/core/utils/app_strings.dart';
 
@@ -26,7 +27,9 @@ class ProssedToCheckoutSection extends StatelessWidget {
           SizedBox(
       width: 181.w,
       height: 38.h,
-      child: CustomSmallBtn(text: AppStrings.checkOut)
+      child: CustomSmallBtn(text: AppStrings.checkOut,ontap: () {
+        context.push("/checkOut");
+      },)
     )
       ],
     );

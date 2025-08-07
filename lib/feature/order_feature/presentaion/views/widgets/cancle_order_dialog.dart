@@ -38,7 +38,9 @@ child:
             SizedBox(
               width: 224.w,
               height: 44.h,
-              child: CustomSmallBtn( text: AppStrings.confirmCanclation,)),
+              child: CustomSmallBtn( text: AppStrings.confirmCanclation,ontap: () {
+                
+              },)),
             
             TextButton(onPressed: (){}, child: Text(AppStrings.close,style: CustomTextStyle.regular,))
            

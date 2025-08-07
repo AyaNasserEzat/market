@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 

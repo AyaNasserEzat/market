@@ -32,6 +32,11 @@ class CustomTextStyle {
         fontFamily: 'TitilliumWeb',
 
   );
+      static TextStyle regularTitilliumWeb16=TextStyle(
+    fontSize: 16.sp,color: AppColor.grey4A,
+        fontFamily: 'TitilliumWeb',
+
+  );
     static TextStyle arial=TextStyle(
     fontSize: 18.sp,color: AppColor.blue,
       
@@ -51,6 +56,6 @@ class CustomTextStyle {
     fontSize: 24.sp,color: AppColor.green,fontFamily: "Poppins",fontWeight: FontWeight.w700
   );
      static TextStyle TitilliumWebBold16=TextStyle(
-    fontSize: 16.sp,color: AppColor.green,fontFamily: "TitilliumWeb"
+    fontSize: 16.sp,color: AppColor.green,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
   );
 }
