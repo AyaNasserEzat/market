@@ -4,8 +4,8 @@ import 'package:pure_soft/core/utils/app_color.dart';
 
 
 class CircleIndicator extends StatelessWidget {
-  const CircleIndicator({super.key});
-
+  const CircleIndicator({super.key, required this.isActive});
+final bool isActive;
   @override
   Widget build(BuildContext context) {
     return    Padding(
@@ -19,12 +19,12 @@ class CircleIndicator extends StatelessWidget {
           
                   decoration: BoxDecoration(
                     color: AppColor.white,
-                    border: Border.all(color: AppColor.green, width: .3),
+                    border: Border.all(color: isActive? AppColor.green:AppColor.gray, width: .3),
           
                     shape: BoxShape.circle,
                   ),
                   child: Center(
-                    child: CircleAvatar(radius: 4, backgroundColor: AppColor.green),
+                    child: CircleAvatar(radius: 4, backgroundColor:isActive? AppColor.green:AppColor.gray),
                   ),
                 ),
               

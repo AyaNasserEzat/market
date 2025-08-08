@@ -31,7 +31,7 @@ class AdressDetailsContainer extends StatelessWidget {
               children: [
                 Icon(Icons.location_on),
                 Text("Address 1",style: CustomTextStyle.TitilliumWebBold16,),
-                SizedBox(width: 200,),
+            Spacer(),
                 CheckContainer(),
             
             

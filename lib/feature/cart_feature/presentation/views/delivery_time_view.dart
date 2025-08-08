@@ -11,14 +11,19 @@ class DeliveryTimeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-  children: [
-    NowContainer(child: NowTimeRow(),),
-    SizedBox(height: 25.h,),
-    SelectDeliveryTimeContainer()
-
-  ],
-
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        
+        children: [
+      NowContainer(child: NowTimeRow(),),
+      SizedBox(height: 25.h,),
+      SelectDeliveryTimeContainer(),
+      
+      
+        ],
+      
+      ),
     );
   }
 }

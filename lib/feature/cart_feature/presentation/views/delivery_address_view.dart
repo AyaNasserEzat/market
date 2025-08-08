@@ -9,15 +9,18 @@ class DeliveryAddressView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column
-    (
-      spacing: 15,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text("Select Delivery Address",style: CustomTextStyle.TitilliumWebBold16,),
-        NowContainer(child: NewAddressRow(),),
-        AdressDetailsContainer()
-      ],
+    return  Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column
+      (
+        spacing: 15,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Select Delivery Address",style: CustomTextStyle.TitilliumWebBold16,),
+          NowContainer(child: NewAddressRow(),),
+          AdressDetailsContainer()
+        ],
+      ),
     );
   }
 }
