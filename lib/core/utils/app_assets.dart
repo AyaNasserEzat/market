@@ -1,4 +1,5 @@
 class AppAssetes {
+  static String splashImage1="assets/images/app_name_img.png";
   static String homeImage = "assets/images/home.png";
   //icons unselected bottom navigation bar
   static String homeIcon = "assets/images/home.svg";

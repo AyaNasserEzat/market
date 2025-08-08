@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/forget_password_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/login_view.dart';
+import 'package:pure_soft/feature/auth_feature/presentation/views/onbording_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/otp_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
@@ -86,6 +87,11 @@ class AppRouter {
         path: "/checkOut",
         builder: (context, state) =>  CheckOutView(),
       ),
+
+                       GoRoute(
+        path: "/onBording",
+        builder: (context, state) =>  OnbordingView(),
+      )
     ],
   );
 }

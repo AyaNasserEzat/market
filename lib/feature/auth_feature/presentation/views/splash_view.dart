@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 
@@ -20,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(const Duration(seconds: 4), () {
-        context.go("/login");
+        context.go("/onBording");
       });
     });
   }
@@ -34,7 +35,7 @@ class _SplashViewState extends State<SplashView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
                        SizedBox(height: 230.h,),
-          Image.asset("assets/images/6666666666 copy 1.png",width: 441.w.w,height: 223.h.h,),
+          Image.asset(AppAssetes.splashImage1,width: 441.w.w,height: 223.h.h,),
        Spacer(),
           Image.asset("assets/images/343434 1.png",width: 441.75.w,height: 314.61.h,)
           ],
