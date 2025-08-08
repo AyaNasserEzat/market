@@ -51,4 +51,9 @@ static const String checkOutTitle = 'Checkout';
   static const String message = 'Message';
   static const String termAndCondation = 'Terms and Condations';
   static const String favorit = 'Favorit  ';
+
+
+    static const String cash = "Cash of Delivery ";
+      static const String credit = "Credit Card/Debit Card ";
+        static const String knet = "Knet";
 }

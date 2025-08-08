@@ -12,7 +12,9 @@ class AppAssetes {
   static String selectedBasket = "assets/images/selected_basket.svg";
   static String selectedFavorite = "assets/images/selected_faviort.svg";
   static String selectedMore = "assets/images/selected_more.svg";
-
+  static String knet="assets/images/knet.svg";
+  static String chash="assets/images/cash_image.svg";
+    static String credit="assets/images/credit_image.svg";
   static String offer = "assets/images/offer.png";
    static String ops= "assets/images/ops_image.svg";
   static String confirmImage= "assets/images/confirm_image.svg";

@@ -6,6 +6,7 @@ import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_button.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/delivery_address_view.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/delivery_time_view.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/payment_view.dart';
 
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/custom_dash_line.dart';
 
@@ -26,29 +27,34 @@ class _CheckOutViewState extends State<CheckOutView> {
         centerTitle: true,
         title: Text(AppStrings.checkOutTitle, style: CustomTextStyle.poppins),
       ),
-      body: Column(
-        spacing: 15,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 40.0),
-            child: Row(
-              children: [
-                CustomDashLine(text: "Delivery Time", index: 1),
-                CustomDashLine(text: "Delivery Address", index: 2),
-                CustomDashLine(text: "Payment", index: 3),
-              ],
-            ),
+      body: SingleChildScrollView(
+        child: Expanded(
+          child: Column(
+            spacing: 15,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 40.0),
+                child: Row(
+                  children: [
+                    CustomDashLine(text: "Delivery Time", index: 1),
+                    CustomDashLine(text: "Delivery Address", index: 2),
+                    CustomDashLine(text: "Payment", index: 3),
+                  ],
+                ),
+              ),
+              Divider(height: 1, color: AppColor.gray),
+              
+            //  DeliveryTimeView(),
+           // DeliveryAddressView(),
+           PaymentView(),
+             // Spacer(),
+              CustomButton(onpressed: (){
+          
+              }, text: "Continue")
+          
+            ],
           ),
-          Divider(height: 1, color: AppColor.gray),
-    
-        //  DeliveryTimeView(),
-        DeliveryAddressView(),
-          Spacer(),
-          CustomButton(onpressed: (){
-
-          }, text: "Continue")
-
-        ],
+        ),
       ),
     );
   }
