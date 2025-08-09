@@ -37,14 +37,14 @@ class CustomContainer extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text("Saller Name ",style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 19.sp),),
+                      Text("Saller Name ",style: CustomTextStyle.titilliumWebBoldBlack19,),
                       
-                      Image.asset("assets/images/offer.png"),
+                      Image.asset(AppAssetes.offerIcon),
                     ],
                   ),
                   Row(
                     children: [
-                      Image.asset("assets/images/delaviry_image.png"),
+                      Image.asset(AppAssetes.deliveryIcon),
                       Text(
                         "  Delivery charge:34.0 KD",
                         style: CustomTextStyle.regularTitilliumWeb,

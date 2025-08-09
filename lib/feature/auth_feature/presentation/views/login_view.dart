@@ -45,6 +45,8 @@ class LoginView extends StatelessWidget {
                       style: TextStyle(
                         color: AppColor.blue,
                         decoration: TextDecoration.underline,
+                        decorationColor: AppColor.blue
+                        
                       ),
                     ),
                   ],

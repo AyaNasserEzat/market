@@ -17,17 +17,17 @@ class OnBordingModel {
     OnBordingModel(
       title: AppStrings.onBordingTitle1,
       subTitle: AppStrings.onBordingSubTitle1,
-      image: AppAssetes.splashImage1,
+      image: AppAssetes.onbording,
     ),
     OnBordingModel(
       title: AppStrings.onBordingTitle2,
       subTitle: AppStrings.onBordingSubTitle2,
-      image: AppAssetes.splashImage1,
+      image: AppAssetes.onbording,
     ),
     OnBordingModel(
       title: AppStrings.onBordingTitle3,
       subTitle: AppStrings.onBordingSubTitle3,
-      image: AppAssetes.splashImage1,
+      image: AppAssetes.onbording,
     ),
   ];
 }

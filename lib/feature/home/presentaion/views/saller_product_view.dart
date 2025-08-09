@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/category_list_view.dart';
-
 
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_product_container.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/saller_card.dart';
@@ -15,35 +16,52 @@ class SallerProductView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-       appBar: AppBar(
-             leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: () { context.pop(); },),
-        centerTitle: true,
-        title: Text(
-          AppStrings.appTitle,
-          style: CustomTextStyle.poppins,
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            context.pop();
+          },
         ),
-        actions: [Icon(Icons.search,color: AppColor.green,size: 40,),]
-    ),
-    body: SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          //  CustomContainer(isOpen: true),
-          SallerCard(isOpen: true),
-            Text("Categories",style: CustomTextStyle.bold19,),
-            SizedBox(
-              height: 130.h,
-              
-              child: CategoryListView()
-            ),
-             Text("Products",style: CustomTextStyle.bold19,),
-             CustomProductContainer()
-          ],
+        centerTitle: true,
+        title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
+        actions: [Icon(Icons.search, color: AppColor.green, size: 40)],
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            spacing: 10,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+        
+              SallerCard(isOpen: true),
+              Text(
+                "Categories",
+                style: CustomTextStyle.TitilliumWebBold16.copyWith(
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(height: 130.h, child: CategoryListView()),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Products",
+                    style: CustomTextStyle.TitilliumWebBold16.copyWith(
+                      fontSize: 18,
+                    ),
+                  ),
+                  SvgPicture.asset(AppAssetes.arrowProducts)
+                ],
+              ),
+              CustomProductContainer(),
+               CustomProductContainer(),
+            ],
+          ),
         ),
       ),
-    ),);
+    );
   }
 }

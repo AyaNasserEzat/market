@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Sallers", style: CustomTextStyle.bold19),
+                    Text("Sallers", style: CustomTextStyle.titilliumWebBoldBlack19),
                     Text("Show all", style: CustomTextStyle.arial),
                   ],
                 ),

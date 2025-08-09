@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/add_to_cart_btn.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/product_name_section.dart';
@@ -19,7 +21,9 @@ class ProductDetailsView extends StatelessWidget {
       title: Text("product name",style: CustomTextStyle.poppins,),
       centerTitle: true,
       actions: [
-Icon(        Icons.favorite),
+SvgPicture.asset(AppAssetes.favorite,width: 25,),
+SizedBox(width: 10,)
+
 
       ],
     ),

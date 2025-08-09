@@ -20,7 +20,7 @@ final VoidCallback onPressed;
      TextSpan(
       text: text2,
 
-      style: TextStyle(color: AppColor.blue,decoration: TextDecoration.underline),
+      style: TextStyle(color: AppColor.blue,decoration: TextDecoration.underline,decorationColor: AppColor.blue),
       recognizer:TapGestureRecognizer()..onTap=onPressed
     )
                   ]));

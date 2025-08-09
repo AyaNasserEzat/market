@@ -48,6 +48,11 @@ class CustomTextStyle {
       
 
   );
+        static TextStyle regularInter=TextStyle(
+    fontSize: 16.sp,color: AppColor.black,
+        fontFamily: 'regular',
+
+  );
   
   
     static TextStyle bold19=TextStyle(
@@ -63,5 +68,8 @@ class CustomTextStyle {
   );
      static TextStyle TitilliumWebBold16=TextStyle(
     fontSize: 16.sp,color: AppColor.green,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
+  );
+       static TextStyle titilliumWebBoldBlack19=TextStyle(
+    fontSize: 20.sp,color: AppColor.black,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
   );
 }

@@ -18,7 +18,7 @@ class _SelectWeightSectionState extends State<SelectWeightSection> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("select weight",style: CustomTextStyle.bold19,),
+            Text("select weight",style: CustomTextStyle.titilliumWebBoldBlack19,),
             IconButton(onPressed: (){
 setState(() {
   isVisable=!isVisable;

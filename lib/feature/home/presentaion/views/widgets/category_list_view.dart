@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_category_containr.dart';
+import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/category.dart';
+
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView({super.key});
@@ -12,9 +14,11 @@ class CategoryListView extends StatelessWidget {
                 itemBuilder: (context,index){
                 
                 return Column(
+                  spacing: 5.dm,
                   children: [
-                    CustomgategoryContainr(image: "assets/images/fruits.png"),
-                    Text("Frutis")
+                    //CustomgategoryContainr(image: "assets/images/fruits.png"),
+                    Category(image: "assets/images/fruits.png"),
+                    Text("Frutis",style: CustomTextStyle.regularInter,)
                   ],
                 );
               }, separatorBuilder: (context,index){

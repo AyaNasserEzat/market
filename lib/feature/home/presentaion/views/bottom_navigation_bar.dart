@@ -35,7 +35,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
   final List<_NavItemData> navItems = [
     _NavItemData(icon: AppAssetes.homeIcon, selectedIcon: AppAssetes.selectedHome, label: "Home"),
     _NavItemData(icon: AppAssetes.orderIcon, label: "Orders", selectedIcon: AppAssetes.selectedOrder),
-    _NavItemData(icon: AppAssetes.bassketIon, label: "Cart", selectedIcon: AppAssetes.selectedBasket),
+    _NavItemData(icon: AppAssetes.bassketIon, label: "Basket", selectedIcon: AppAssetes.selectedBasket),
     _NavItemData(icon: AppAssetes.favorites, label: "Favorites", selectedIcon: AppAssetes.selectedFavorite),
     _NavItemData(icon: AppAssetes.more, label: "More", selectedIcon: AppAssetes.selectedMore),
   ];
@@ -82,6 +82,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
                   
                   SvgPicture.asset(
   item.selectedIcon,
+
   // اختياري لتغيير اللون
 ),
               
@@ -94,6 +95,8 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
           //Image.asset(AppAssetes.homeIcon)
        SvgPicture.asset(
  item.icon,
+   height: 27.h,
+  width: 27.w,
  // اختياري لتغيير اللون
 ),
     );

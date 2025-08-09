@@ -6,8 +6,12 @@ class AppAssetes {
   static String orderIcon = "assets/images/orders.svg";
   static String bassketIon = "assets/images/bassket.svg";
   static String more = "assets/images/more.svg";
-
+  static String arrowProducts = "assets/images/arrow_products.svg";
+    static String onbording = "assets/images/onbording_image.jpeg";
+   static String  shop="assets/images/34 Shopping basket, add, Buy Shop.png";
   ///home
+  static const String deliveryIcon = "assets/images/delaviry_image.png";
+  static const String offerIcon = "assets/images/offer.png";
   static const String compnyLogo = 'assets/images/compony_logo.svg';
   static const String searchIcon = 'assets/images/search_icon.svg';
   static const String filterIcon = 'assets/images/filter_icon.svg';
@@ -18,7 +22,7 @@ class AppAssetes {
   static String selectedBasket = "assets/images/selected_basket.svg";
   static String selectedFavorite = "assets/images/selected_faviort.svg";
   static String selectedMore = "assets/images/selected_more.svg";
-  
+
   static String knet = "assets/images/knet.svg";
   static String chash = "assets/images/cash_image.svg";
   static String credit = "assets/images/credit_image.svg";

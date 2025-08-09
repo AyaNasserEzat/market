@@ -12,13 +12,18 @@ class ProductNameSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "category name",
-              style: CustomTextStyle.bold19.copyWith(fontSize: 16.sp),
+              "Category Name",
+              style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 16.sp),
             ),
-           
+            SizedBox(width: 220.w,),
+                       Text(
+              "Price",
+              style: CustomTextStyle.regularTitilliumWeb.copyWith(fontSize: 14.sp),
+            ),
+         
           ],
         ),
         Row(
@@ -26,18 +31,19 @@ class ProductNameSection extends StatelessWidget {
           children: [
             Text(
               "product name",
-              style: CustomTextStyle.bold19.copyWith(fontSize: 23.sp),
+              style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 24.sp),
             ),
             Text.rich(
               TextSpan(
                 children: [
-                  TextSpan(text: "KD 12.00", style: CustomTextStyle.bold19),
+                  TextSpan(text: "KD 12.00", style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 20,color: AppColor.grey65)),
                   TextSpan(
                     text: "KD 14.00",
                     style: CustomTextStyle.regular.copyWith(
                       fontSize: 17.sp,
                       color: AppColor.pink,
                       decoration: TextDecoration.lineThrough,
+                      decorationColor: AppColor.pink
                     ),
                   ),
                 ],
@@ -45,8 +51,9 @@ class ProductNameSection extends StatelessWidget {
             ),
           ],
         ),
-        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit...",style: CustomTextStyle.regular,),
-         Text("Sell Per: Kartoon", style: TextStyle(color: Colors.grey)),
+        Text("Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.elit...",style: CustomTextStyle.regular,),
+        SizedBox(height: 10,),
+         Text("Sell Per: Kartoon", style: CustomTextStyle.regularTitilliumWeb16),
       ],
     );
   }

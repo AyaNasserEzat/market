@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
 
 class CustomProductContainer extends StatelessWidget {
   const CustomProductContainer({super.key});
@@ -28,20 +30,20 @@ class CustomProductContainer extends StatelessWidget {
             child: Row(
               spacing: 10,
               children: [
-                CircleAvatar(radius: 35),
+          CustomCircleContainer(),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
-                        Text("Product Name ",style: CustomTextStyle.bold19,),
+                        Text("Product Name ",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black),),
                         
                  
                       ],
                     ),
                     Row(
                       children: [
-                      Text("12.00 KD  "),
+                      Text("12.00 KD  ",style:  CustomTextStyle.regularTitilliumWeb,),
                         Text(
                           " 14.00 KD",
                           style: CustomTextStyle.regular.copyWith(decoration: TextDecoration.lineThrough,color: AppColor.gray),
@@ -57,21 +59,15 @@ class CustomProductContainer extends StatelessWidget {
                   color: AppColor.pink,
                   borderRadius: BorderRadius.circular(50)
                 ),
-                child: Center(child: Text("up to 50 off%",style: CustomTextStyle.simebold12,)),
+                child: Center(child: Text("up to 50% off",style: CustomTextStyle.simebold12,)),
                )
                   ],
                 ),
-                SizedBox(width: 15.w,),
-                Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-      CircleAvatar(
-        backgroundColor: AppColor.green,
-        radius: 30,
-        child: Image.asset("assets/images/34 Shopping basket, add, Buy Shop.png"))
-                  ],
-                ),
+                SizedBox(width: 70.w,),
+                CircleAvatar(
+                  backgroundColor: AppColor.green,
+                  radius: 25,
+                  child: Image.asset(AppAssetes.shop)),
               ],
             ),
           ),
