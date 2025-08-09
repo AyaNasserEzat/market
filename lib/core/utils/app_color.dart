@@ -6,13 +6,13 @@ class AppColor {
   static Color blue = Color(0xff005B96);
   static Color gray = Color(0xff858D9A);
   static Color white = Color(0xffFFFFFF);
-  static Color green2 = Color(0xff204F38);
+  static Color green38 = Color(0xff204F38);
   static Color orange = Color(0xffED692E);
   static Color gray2 = Color(0xffC8C8C8);
   static Color red = Color(0xffFF4A4A);
   static Color green3 = Color(0xff00BB1A);
   
-
+  static Color greyShaded500 = Colors.grey.shade500;
   static Color pink = Color(0xffDF958F);
   static Color grayf9 = Color(0xffF9F9F9);
   static Color grey65 = Color(0xff656565);

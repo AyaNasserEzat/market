@@ -1,5 +1,5 @@
 class AppAssetes {
-  static String splashImage1="assets/images/app_name_img.png";
+  static String splashImage1 = "assets/images/app_name_img.png";
   static String homeImage = "assets/images/home.png";
   //icons unselected bottom navigation bar
   static String homeIcon = "assets/images/home.svg";
@@ -7,18 +7,24 @@ class AppAssetes {
   static String bassketIon = "assets/images/bassket.svg";
   static String more = "assets/images/more.svg";
 
+  ///home
+  static const String compnyLogo = 'assets/images/compony_logo.svg';
+  static const String searchIcon = 'assets/images/search_icon.svg';
+  static const String filterIcon = 'assets/images/filter_icon.svg';
+  static const String locationIcon = 'assets/images/location_icon.svg';
   static String favorites = "assets/images/favorite.svg";
   static String selectedHome = "assets/images/selected_home.svg";
   static String selectedOrder = "assets/images/selected_order.svg";
   static String selectedBasket = "assets/images/selected_basket.svg";
   static String selectedFavorite = "assets/images/selected_faviort.svg";
   static String selectedMore = "assets/images/selected_more.svg";
-  static String knet="assets/images/knet.svg";
-  static String chash="assets/images/cash_image.svg";
-    static String credit="assets/images/credit_image.svg";
+  
+  static String knet = "assets/images/knet.svg";
+  static String chash = "assets/images/cash_image.svg";
+  static String credit = "assets/images/credit_image.svg";
   static String offer = "assets/images/offer.png";
-   static String ops= "assets/images/ops_image.svg";
-  static String confirmImage= "assets/images/confirm_image.svg";
+  static String ops = "assets/images/ops_image.svg";
+  static String confirmImage = "assets/images/confirm_image.svg";
 
   static const String iconUser = 'assets/images/Icon feather-user.svg';
 

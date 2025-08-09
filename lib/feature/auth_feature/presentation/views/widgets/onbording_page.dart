@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 
@@ -8,7 +8,7 @@ import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/on_bording_model.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_indicator.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/onbording_btn.dart';
-import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/custom_small_btn.dart';
+
 
 class OnbordingPage extends StatelessWidget {
   const OnbordingPage({
