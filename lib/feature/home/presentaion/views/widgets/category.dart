@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class Category extends StatelessWidget {
@@ -9,8 +9,7 @@ final String image;
   @override
   Widget build(BuildContext context) {
     return  Container(
-        width: 90.w,
-          height: 100.h,
+    
           decoration: BoxDecoration(
             color: AppColor.white,
             borderRadius: BorderRadius.circular(16),

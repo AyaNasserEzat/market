@@ -11,8 +11,7 @@ class AddToCartBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
-      width: 144.w,
-      height: 38.h,
+
       child: ElevatedButton(
         onPressed: (){},
         style: ElevatedButton.styleFrom(
@@ -24,7 +23,7 @@ class AddToCartBtn extends StatelessWidget {
         ),
         child: Row(
           children: [
-            SvgPicture.asset(AppAssetes.bassketIon,width: 28.w,height: 18.h,),
+            SvgPicture.asset(AppAssetes.bassketIon,width: 28.w,height: 25.h,),
             Text("  Add to Cart", style: CustomTextStyle.simebold12),
           ],
         ),

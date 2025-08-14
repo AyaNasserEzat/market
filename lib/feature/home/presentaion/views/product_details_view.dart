@@ -37,6 +37,7 @@ SizedBox(width: 10,)
             ProductNameSection(),
             SelectWeightSection(),
             SelectWeightSection(),
+            SizedBox(height: 100,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

@@ -9,6 +9,7 @@ import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/category_list_view.dart';
 
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_product_container.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/products_list_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/saller_card.dart';
 
 class SallerProductView extends StatelessWidget {
@@ -28,8 +29,10 @@ class SallerProductView extends StatelessWidget {
         title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
         actions: [Icon(Icons.search, color: AppColor.green, size: 40)],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             spacing: 10,
@@ -43,7 +46,7 @@ class SallerProductView extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
-              SizedBox(height: 130.h, child: CategoryListView()),
+              CategoryListView(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -56,11 +59,15 @@ class SallerProductView extends StatelessWidget {
                   SvgPicture.asset(AppAssetes.arrowProducts)
                 ],
               ),
-              CustomProductContainer(),
-               CustomProductContainer(),
+          
+            
             ],
           ),
         ),
+          ),
+              ProductsListView(),
+        ]
+        ,
       ),
     );
   }

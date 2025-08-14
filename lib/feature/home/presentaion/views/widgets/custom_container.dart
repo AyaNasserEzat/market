@@ -48,7 +48,7 @@ class CustomContainer extends StatelessWidget {
                         Text("Saller Name ",style: CustomTextStyle.titilliumWebBoldBlack19,),
                         
                         Image.asset(AppAssetes.offerIcon),
-                        SizedBox(width:90,),
+                        SizedBox(width:80,),
                          Text("4.5",style: CustomTextStyle.regularTitilliumWeb16,),
                       ],
                     ),
@@ -73,13 +73,13 @@ class CustomContainer extends StatelessWidget {
                         ),
                         CircleAvatar(backgroundColor: AppColor.gray2, radius: 3),
                         Text("  Pizaa  ", style: CustomTextStyle.regular.copyWith(color: AppColor.blue)),
-                    SizedBox(width: 90,),
+                    SizedBox(width: 70,),
                       Text("23 KM ",style: CustomTextStyle.regularArial.copyWith(color: AppColor.green38),),
             
                                          SvgPicture.asset(
                         AppAssetes.locationIcon,
-                        width: 18.w,
-                        height: 18.h,
+                        width: 18,
+                        height: 18,
                       ),
                      
                       ],

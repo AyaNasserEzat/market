@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
@@ -10,8 +10,8 @@ class CustomCircleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 82.h,
-      width: 82.w,
+      height: 82,
+      width: 82,
       decoration: BoxDecoration(
         color: AppColor.white,
         shape: BoxShape.circle,
