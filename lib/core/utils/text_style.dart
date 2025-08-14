@@ -61,7 +61,7 @@ class CustomTextStyle {
        fontWeight: FontWeight.bold
   );
       static TextStyle simebold12=TextStyle(
-    fontSize: 12,color: AppColor.white,
+    fontSize: 16,color: AppColor.white,
        fontFamily: 'TitilliumWeb',
   );
    static TextStyle poppins=TextStyle(

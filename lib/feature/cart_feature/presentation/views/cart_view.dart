@@ -22,17 +22,14 @@ class CartView extends StatelessWidget {
         ),
  
     ),
-    body:  Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: CustomScrollView(
-        slivers: [
-      const CartListView(), 
-        SliverToBoxAdapter(child: SizedBox(height: 150)),
-      SliverToBoxAdapter(child: CheckoutSection()),
-      SliverToBoxAdapter(child: SizedBox(height: 30)),
-      SliverToBoxAdapter(child: ProssedToCheckoutSection()),
-        ],
-      ),
+    body:  CustomScrollView(
+      slivers: [
+    const CartListView(), 
+      SliverToBoxAdapter(child: SizedBox(height: 150)),
+    SliverToBoxAdapter(child: CheckoutSection()),
+    SliverToBoxAdapter(child: SizedBox(height: 30)),
+    SliverToBoxAdapter(child: ProssedToCheckoutSection()),
+      ],
     ),
     );
   }

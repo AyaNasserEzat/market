@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 
@@ -31,8 +31,8 @@ class StackSection extends StatelessWidget {
           top: 10,
           right: 10,
           child: Container(
-            height: 29.h,
-            width: 135.w,
+            height: 29,
+            width: 135,
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
               color: AppColor.white,
