@@ -1,0 +1,126 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+
+import 'package:go_router/go_router.dart';
+import 'package:pure_soft/core/utils/app_assets.dart';
+import 'package:pure_soft/core/utils/app_color.dart';
+import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
+
+class GridViewContainer extends StatelessWidget {
+  const GridViewContainer({super.key, required this.isOpen});
+  final bool isOpen;
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight=  MediaQuery.of(context).size.width;
+    return GestureDetector(
+      onTap: () {
+        context.push("/sallerProduct");
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8.0, right: 8),
+        child: Container(
+          width: double.infinity,
+
+          decoration: BoxDecoration(
+            color: AppColor.white,
+            borderRadius: BorderRadius.circular(24),
+            boxShadow: [
+              BoxShadow(
+                color: Color(0x40000000),
+                blurRadius: 4,
+                offset: Offset(0, 1),
+              ),
+            ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 1.0, top: 8, bottom: 8),
+            child: Row(
+
+     
+              children: [
+               CustomCircleContainer(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Saller Name ",
+                          style: CustomTextStyle.titilliumWebBoldBlack19,
+                        ),
+
+                        Image.asset(AppAssetes.offerIcon),
+                      SizedBox(width: 20,),
+                        Text(
+                          "4.5",
+                          style: CustomTextStyle.regularTitilliumWeb16,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Image.asset(AppAssetes.deliveryIcon),
+                        Text(
+                          "  Delivery charge:34.0 KD",
+                          style: CustomTextStyle.regularTitilliumWeb,
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: AppColor.gray2,
+                          radius: 3,
+                        ),
+                        Text(
+                          isOpen ? " Open  " : " closed  ",
+                          style:
+                              isOpen
+                                  ? CustomTextStyle.regular.copyWith(
+                                    color: AppColor.green3,
+                                  )
+                                  : CustomTextStyle.regular.copyWith(
+                                    color: AppColor.red,
+                                  ),
+                        ),
+                        CircleAvatar(
+                          backgroundColor: AppColor.gray2,
+                          radius: 3,
+                        ),
+                        Text(
+                          "  Pizaa  ",
+                          style: CustomTextStyle.regular.copyWith(
+                            color: AppColor.blue,
+                          ),
+                        ),
+SizedBox(width: 20,),
+                        Text(
+                          "23 KM ",
+                          style: CustomTextStyle.regularArial.copyWith(
+                            color: AppColor.green38,
+                          ),
+                        ),
+
+                        SvgPicture.asset(
+                          AppAssetes.locationIcon,
+                          width: 18,
+                          height: 18,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+ 
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

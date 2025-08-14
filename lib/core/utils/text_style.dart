@@ -5,71 +5,72 @@ import 'package:pure_soft/core/utils/app_color.dart';
 
 class CustomTextStyle {
   static TextStyle logo = TextStyle(
-    fontSize: 40.sp,
+    fontSize: 40,
     fontWeight: FontWeight.bold,
     color: AppColor.green,
     fontFamily: "Poppins"
   );
 
   static TextStyle medianstyle = TextStyle(
-    fontSize: 16.sp,
+    fontSize: 16,
     color: AppColor.white,
   );
 
   static TextStyle regular=TextStyle(
-    fontSize: 14.sp,color: AppColor.gray,
+    fontSize: 14,color: AppColor.gray,
         fontFamily: 'TitilliumWeb',
 
   );
     static TextStyle regularArial=TextStyle(
-    fontSize: 14.sp,color: AppColor.gray,
+    fontSize: 14,color: AppColor.gray,
      
 
   );
     static TextStyle regularBold=TextStyle(
-    fontSize: 18.sp,color: AppColor.grey65,
+    fontSize: 18,color: AppColor.grey65,
     fontWeight: FontWeight.bold,
         fontFamily: 'TitilliumWeb',
 
   );
       static TextStyle regularTitilliumWeb=TextStyle(
-    fontSize: 14.sp,color: AppColor.grey65,
+    fontSize: 14,color: AppColor.grey65,
     fontWeight: FontWeight.bold,
         fontFamily: 'TitilliumWeb',
 
   );
       static TextStyle regularTitilliumWeb16=TextStyle(
-    fontSize: 16.sp,color: AppColor.grey4A,
+    fontSize: 16,color: AppColor.grey4A,
         fontFamily: 'TitilliumWeb',
 
   );
     static TextStyle arial=TextStyle(
-    fontSize: 18.sp,color: AppColor.blue,
+    fontSize: 18,color: AppColor.blue,
       
 
   );
         static TextStyle regularInter=TextStyle(
-    fontSize: 16.sp,color: AppColor.black,
+    fontSize: 16,color: AppColor.black,
         fontFamily: 'regular',
 
   );
   
   
     static TextStyle bold19=TextStyle(
-    fontSize: 19.sp,color: AppColor.black,
+    fontSize: 19,color: AppColor.black,
        fontFamily: 'TitilliumWeb',
+       fontWeight: FontWeight.bold
   );
       static TextStyle simebold12=TextStyle(
-    fontSize: 12.sp,color: AppColor.white,
+    fontSize: 12,color: AppColor.white,
        fontFamily: 'TitilliumWeb',
   );
    static TextStyle poppins=TextStyle(
-    fontSize: 24.sp,color: AppColor.green,fontFamily: "Poppins",fontWeight: FontWeight.w700
+    fontSize: 24,color: AppColor.green,fontFamily: "Poppins",fontWeight: FontWeight.w700
   );
      static TextStyle TitilliumWebBold16=TextStyle(
-    fontSize: 16.sp,color: AppColor.green,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
+    fontSize: 16,color: AppColor.green,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
   );
        static TextStyle titilliumWebBoldBlack19=TextStyle(
-    fontSize: 20.sp,color: AppColor.black,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
+    fontSize: 20,color: AppColor.black,fontFamily: "TitilliumWeb",fontWeight: FontWeight.bold
   );
 }

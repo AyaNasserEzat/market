@@ -48,11 +48,11 @@ class _CheckOutViewState extends State<CheckOutView> {
 children: [
          DeliveryTimeView(),
        DeliveryAddressView(),
-       PaymentView(),
+      PaymentView(),
 ],
           ),
 
-          Spacer(),
+          
           CustomButton(onpressed: (){
       setState(() {
         if (widget.currentIndex<2) {

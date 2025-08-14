@@ -30,7 +30,7 @@ class AdressDetailsContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.location_on),
-                Text("Address 1",style: CustomTextStyle.TitilliumWebBold16,),
+                Text("Address 1",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black)),
             Spacer(),
                 CheckContainer(),
             
@@ -39,7 +39,7 @@ class AdressDetailsContainer extends StatelessWidget {
             ),
             Text("Alaa nasser",style: CustomTextStyle.regularTitilliumWeb16,),
             Text("+01-56-9900",style: CustomTextStyle.regularTitilliumWeb16,),
-            Text("Room #1 ground floor Al nagoun Bulding 23 B street Debui, united arab elmus",style: CustomTextStyle.regularTitilliumWeb16.copyWith(color: AppColor.grey65),)
+            Text("Room #1 ground floor Al nagoun Bulding 23 B street Debui, united arab elmus",style: CustomTextStyle.regularTitilliumWeb16.copyWith(color: AppColor.grey9f),)
           ],
         ),
       ),

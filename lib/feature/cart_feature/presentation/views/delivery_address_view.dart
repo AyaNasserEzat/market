@@ -16,7 +16,7 @@ class DeliveryAddressView extends StatelessWidget {
         spacing: 15,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Select Delivery Address",style: CustomTextStyle.TitilliumWebBold16,),
+          Text("Select Delivery Address",style: CustomTextStyle.titilliumWebBoldBlack19,),
           NowContainer(child: NewAddressRow(),),
           AdressDetailsContainer()
         ],

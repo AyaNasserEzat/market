@@ -22,49 +22,54 @@ class LoginView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
-          child: Column(
-            spacing: 10,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AuthHeader(text: AppStrings.logintoWikala),
-              SizedBox(height: 20.h),
-              CustomRow(text: AppStrings.mobileNumberWithWhatspp),
-        
-             PhoneWithWhatsapTextFiled(),
-              CustomRow(text: AppStrings.password),
-              CustomTextFormFiled(text: AppStrings.password),
-              GestureDetector(
-                onTap: () {
-                  context.go("/forgetPassword");
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      AppStrings.forgetPassword,
-                      style: TextStyle(
-                        color: AppColor.blue,
-                        decoration: TextDecoration.underline,
-                        decorationColor: AppColor.blue
-                        
-                      ),
+          child: SingleChildScrollView(
+            child: Center(
+              child: Column(
+                spacing: 10,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                          SizedBox(height: 40.h),
+                  AuthHeader(text: AppStrings.logintoWikala),
+                  SizedBox(height: 20.h),
+                  CustomRow(text: AppStrings.mobileNumberWithWhatspp),
+                      
+                 PhoneWithWhatsapTextFiled(),
+                  CustomRow(text: AppStrings.password),
+                  CustomTextFormFiled(text: AppStrings.password),
+                  GestureDetector(
+                    onTap: () {
+                      context.go("/forgetPassword");
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          AppStrings.forgetPassword,
+                          style: TextStyle(
+                            color: AppColor.blue,
+                            decoration: TextDecoration.underline,
+                            decorationColor: AppColor.blue
+                            
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  CustomButton(onpressed: () {
+                              context.go("/bottom");  
+                  }, text: AppStrings.login),
+                  
+                  SizedBox(height: 20.h),
+                  AlearduMemberText(
+                    text: AppStrings.dontHaveAccount,
+                    text2: AppStrings.signUp,
+                    onPressed: () {
+                      context.go(AppRouter.signUp);
+                    },
+                  ),
+                ],
               ),
-              CustomButton(onpressed: () {
-                          context.go("/bottom");  
-              }, text: AppStrings.login),
-              
-              SizedBox(height: 20.h),
-              AlearduMemberText(
-                text: AppStrings.dontHaveAccount,
-                text2: AppStrings.signUp,
-                onPressed: () {
-                  context.go(AppRouter.signUp);
-                },
-              ),
-            ],
+            ),
           ),
         ),
       ),

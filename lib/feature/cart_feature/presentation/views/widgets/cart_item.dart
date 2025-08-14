@@ -44,17 +44,18 @@ class CartItem extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("Product Name ", style: CustomTextStyle.bold19),
+                    Text("Product Name ", style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 17.sp)),
                   ],
                 ),
                 Row(
                   children: [
-                    Text("12.00 KD  "),
+                    Text("12.00 KD  ",style: CustomTextStyle.regularTitilliumWeb,),
                     Text(
                       " 14.00 KD",
-                      style: CustomTextStyle.regular.copyWith(
+                      style: CustomTextStyle.regularTitilliumWeb.copyWith(
                         decoration: TextDecoration.lineThrough,
-                        color: AppColor.gray,
+                        color: Color(0xffD1D1D1),
+                        decorationColor: Color(0xffD1D1D1),
                       ),
                     ),
                   ],

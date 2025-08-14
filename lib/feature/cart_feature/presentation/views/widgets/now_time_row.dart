@@ -12,7 +12,7 @@ class NowTimeRow extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Now",style: CustomTextStyle.TitilliumWebBold16,),
+            Text("Now",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black),),
             Container(
               width: 40.w,
               height: 38.h,

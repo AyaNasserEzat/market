@@ -11,7 +11,7 @@ class NewAddressRow extends StatelessWidget {
     return  Row(
          mainAxisAlignment: MainAxisAlignment.spaceBetween,
          children: [
-           Text("Add New Address",style: CustomTextStyle.TitilliumWebBold16,),
+           Text("Add New Address",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black),),
            Icon(Icons.add,color: AppColor.gray,size: 30,)
          ],
        );

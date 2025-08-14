@@ -14,8 +14,8 @@ final int currentIndex;
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(3, (index) {
         return Container(
-          width: 12.w,
-          height: 12.h,
+          width: 12,
+          height: 12,
           margin: EdgeInsets.symmetric(horizontal: 4.w),
           decoration: BoxDecoration(
             color:currentIndex==index?AppColor.green: AppColor.white,

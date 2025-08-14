@@ -14,22 +14,20 @@ class PaymentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.all(8.0),
-      child: SingleChildScrollView(
-        child: Expanded(
-          child: Column(
-            spacing: 10,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Cupon Code",style: CustomTextStyle.TitilliumWebBold16,),
-              NowContainer(child: ApplayCuponRow()),
-                    Text("Order Details ",style: CustomTextStyle.TitilliumWebBold16,),
-                    OrderDetailsSection(),
-                      Text("Payment",style: CustomTextStyle.TitilliumWebBold16,),
-                      PaymentSection()
-            
+      child: Expanded(
+        child: Column(
+          spacing: 10,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Cupon Code",style: CustomTextStyle.titilliumWebBoldBlack19,),
+            NowContainer(child: ApplayCuponRow()),
+                  Text("Order Details ",style: CustomTextStyle.titilliumWebBoldBlack19,),
+                  OrderDetailsSection(),
+                    Text("Payment",style: CustomTextStyle.titilliumWebBoldBlack19,),
+                    PaymentSection()
           
-            ],
-          ),
+        
+          ],
         ),
       ),
     );

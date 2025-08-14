@@ -29,12 +29,12 @@ class SelectDeliveryTimeContainer extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Select Delivery time",style: CustomTextStyle.TitilliumWebBold16,),
+                Text("Select Delivery time",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black),),
                CheckContainer()
               ],
             ),
             
-                Text("Select Date",style: CustomTextStyle.regular,),
+                Text("Select Date",style: CustomTextStyle.regularTitilliumWeb.copyWith(color: AppColor.grey4A),),
           ],
         ),
     ));
