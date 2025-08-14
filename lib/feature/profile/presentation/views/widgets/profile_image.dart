@@ -10,8 +10,8 @@ class ProfileImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 80.w,
-      height: 80.h,
+      width: 80,
+      height: 80,
     
       decoration: BoxDecoration(
         shape: BoxShape.circle,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
 
 class FavoritItem extends StatelessWidget {
   const FavoritItem({super.key});
@@ -10,8 +11,7 @@ class FavoritItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-          width: 412.w,
-          height: 115.h,
+
           decoration: BoxDecoration(
             color: AppColor.white,
             borderRadius: BorderRadius.circular(24),
@@ -25,33 +25,16 @@ class FavoritItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 10,
               children: [
-                CircleAvatar(radius: 35),
+                CustomCircleContainer(),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Product Name ",style: CustomTextStyle.bold19,),
+                        Text("Product Name ",style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 16),),
                         
-                 
-                      ],
-                    ),
-                    Row(
-                      children: [
-                      Text("12.00 KD  "),
-                        Text(
-                          " 14.00 KD",
-                          style: CustomTextStyle.regular.copyWith(decoration: TextDecoration.lineThrough,color: AppColor.gray),
-                        ),
-                      ],
-                    ),
-                       Text("Store Name:store 1 ",style: CustomTextStyle.bold19,),
-        
-           
-                  ],
-                ),
-                SizedBox(width: 60.w,),
-                InkWell(
+                     InkWell(
                   onTap: () {
                     
                   },
@@ -68,6 +51,24 @@ class FavoritItem extends StatelessWidget {
                             ),
                     child: Center(child: Icon(Icons.close,size: 13,),)),
                 ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                      Text("12.00 KD  ",style: CustomTextStyle.regularTitilliumWeb,),
+                        Text(
+                          " 14.00 KD",
+                          style: CustomTextStyle.regular.copyWith(decoration: TextDecoration.lineThrough,color: AppColor.greyBE,decorationColor: AppColor.greyBE),
+                        ),
+                      ],
+                    ),
+                       Text("Store Name:store 1 ",style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 16),),
+        
+           
+                  ],
+                ),
+                SizedBox(width: 60.w,),
+               
               ],
             ),
             

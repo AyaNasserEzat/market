@@ -14,21 +14,19 @@ class PaymentView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Expanded(
-        child: Column(
-          spacing: 10,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Cupon Code",style: CustomTextStyle.titilliumWebBoldBlack19,),
-            NowContainer(child: ApplayCuponRow()),
-                  Text("Order Details ",style: CustomTextStyle.titilliumWebBoldBlack19,),
-                  OrderDetailsSection(),
-                    Text("Payment",style: CustomTextStyle.titilliumWebBoldBlack19,),
-                    PaymentSection()
-          
+      child: Column(
+        spacing: 10,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Coupon Code",style: CustomTextStyle.titilliumWebBoldBlack19,),
+          NowContainer(child: ApplayCuponRow()),
+                Text("Order Details ",style: CustomTextStyle.titilliumWebBoldBlack19,),
+                OrderDetailsSection(),
+                  Text("Payment",style: CustomTextStyle.titilliumWebBoldBlack19,),
+                  PaymentSection()
         
-          ],
-        ),
+      
+        ],
       ),
     );
   }

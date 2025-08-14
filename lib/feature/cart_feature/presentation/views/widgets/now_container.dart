@@ -9,8 +9,8 @@ final Widget child;
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: 402.w,
-      height: 70.h,
+      // width: 402.w,
+      // height: 70.h,
       decoration: BoxDecoration(
         color: AppColor.white,
         borderRadius: BorderRadius.circular(15),
@@ -20,7 +20,7 @@ final Widget child;
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: 10.0,bottom: 10,left: 18,right: 18),
+        padding: const EdgeInsets.only(top: 8.0,bottom: 8,left: 10,right: 10),
         child: child
       ),
     );

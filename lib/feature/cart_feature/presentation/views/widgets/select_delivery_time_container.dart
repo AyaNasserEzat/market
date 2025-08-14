@@ -11,8 +11,7 @@ class SelectDeliveryTimeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-        width: 402.w,
-      height: 115.h,
+
       decoration: BoxDecoration(
         color: AppColor.white,
         borderRadius: BorderRadius.circular(20),
@@ -35,6 +34,9 @@ class SelectDeliveryTimeContainer extends StatelessWidget {
             ),
             
                 Text("Select Date",style: CustomTextStyle.regularTitilliumWeb.copyWith(color: AppColor.grey4A),),
+                 Text("20-19-2202",style: CustomTextStyle.TitilliumWebBold16,),
+                 Divider()
+
           ],
         ),
     ));

@@ -58,7 +58,7 @@ static const String checkOutTitle = 'Checkout';
   static const String contactUs = 'Contact Us';
   static const String message = 'Message';
   static const String termAndCondation = 'Terms and Condations';
-  static const String favorit = 'Favorit  ';
+  static const String favorit = 'Favorite  ';
 
 
     static const String cash = "Cash of Delivery ";

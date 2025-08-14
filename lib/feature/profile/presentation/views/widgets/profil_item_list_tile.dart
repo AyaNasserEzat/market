@@ -13,7 +13,7 @@ final  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading:SvgPicture.asset(imageurl,width: 18.w,height: 21.h,) ,
+      leading:SvgPicture.asset(imageurl) ,
       title: Text(title),
       trailing: IconButton(icon: Icon( Icons.arrow_forward_ios,color: AppColor.gray,size: 15,),onPressed:onPressed ,),
     );

@@ -11,9 +11,10 @@ class ApplayCuponRow extends StatelessWidget {
     return  Row
     (
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      
       children: [
-        Text("Do you have any cuopon code?",style: CustomTextStyle.regularTitilliumWeb16,),
-      CustomSmallBtn(text: "applay", ontap: (){})
+        Text("Do You Have any Coupopn Code?",style: CustomTextStyle.regularTitilliumWeb16,),
+      CustomSmallBtn(text: "Applay", ontap: (){})
       ],
     );
   }

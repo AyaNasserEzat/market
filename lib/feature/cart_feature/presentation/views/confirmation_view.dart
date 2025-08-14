@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -15,7 +16,9 @@ class ConfirmationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar:  AppBar(
-        leading: Icon(Icons.arrow_back_ios),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios) ,onPressed: () {
+          context.pop();
+        },),
         centerTitle: true,
         title: Text(
           AppStrings.checkOutTitle,
@@ -24,24 +27,26 @@ class ConfirmationView extends StatelessWidget {
  
     ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          spacing: 5,
+        padding: const EdgeInsets.all(15.0),
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: 5,
           mainAxisAlignment: MainAxisAlignment.center,
-          
-          children: [
-            SvgPicture.asset(AppAssetes.confirmImage),
-            SizedBox(height: 36.h,),
-            Text("your order is confirmed!",style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 26,color: AppColor.green),),
-            Text("your order code # 557775",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
-            Text("Thank you for choosing our products!",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
-            
-             SizedBox(height: 30.h,),
-            CustomButton(onpressed: (){}, text: "Continue shopping",),
-            SizedBox(height: 10,),
-            TrackOrderBtn()
-             
-          ],
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SvgPicture.asset(AppAssetes.confirmImage),
+              SizedBox(height: 36.h,),
+              Text("your order is confirmed!",style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 26,color: AppColor.green),),
+              Text("your order code # 557775",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
+              Text("Thank you for choosing our products!",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
+              
+               SizedBox(height: 30.h,),
+              CustomButton(onpressed: (){}, text: "Continue shopping",),
+              SizedBox(height: 10,),
+              TrackOrderBtn()
+               
+            ],
+          ),
         ),
       ),
     );

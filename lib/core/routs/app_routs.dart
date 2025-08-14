@@ -6,6 +6,7 @@ import 'package:pure_soft/feature/auth_feature/presentation/views/otp_view.dart'
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/check_out_view.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/confirmation_view.dart';
 import 'package:pure_soft/feature/favorite_feature/presentation/views/favorite_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/bottom_navigation_bar.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
@@ -91,6 +92,10 @@ class AppRouter {
                        GoRoute(
         path: "/onBording",
         builder: (context, state) =>  OnbordingView(),
+      ),
+                             GoRoute(
+        path: "/confirmation",
+        builder: (context, state) =>  ConfirmationView(),
       )
     ],
   );

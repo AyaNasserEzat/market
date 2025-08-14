@@ -37,7 +37,9 @@ class ProfileBody extends StatelessWidget {
     ProfileItemListTile(
       imageurl: AppAssetes.selectedOrder,
       title: AppStrings.myOrder,
-      onPressed: () {},
+      onPressed: () {
+        context.push("/order");
+      },
     ),
     ProfileItemListTile(
       imageurl: AppAssetes.favorite,

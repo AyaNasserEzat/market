@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/check_container.dart';
@@ -11,8 +13,7 @@ class AdressDetailsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-            width: 402.w,
-      height: 250.h,
+
       decoration: BoxDecoration(
         color: AppColor.white,
         borderRadius: BorderRadius.circular(15),
@@ -29,8 +30,8 @@ class AdressDetailsContainer extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.location_on),
-                Text("Address 1",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black)),
+                SvgPicture.asset(AppAssetes.addressIcon),
+                Text("  Address 1",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black)),
             Spacer(),
                 CheckContainer(),
             
