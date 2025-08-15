@@ -26,7 +26,7 @@ class SupportView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             spacing: 10,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,12 @@ class SupportView extends StatelessWidget {
           CustomTextFormFiled(text: ""),
             Text(AppStrings.message,style: CustomTextStyle.regular,),
           MessageContainer(height: 110,),
-          CustomButton(onpressed: (){}, text: AppStrings.submit),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomButton(onpressed: (){}, text: AppStrings.submit,width: 340,),
+            ],
+          ),
 SizedBox(height: 10,),
           ContactRowIcons()
           

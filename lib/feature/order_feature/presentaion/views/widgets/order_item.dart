@@ -18,8 +18,7 @@ class OrderItem extends StatelessWidget {
           context.push("/orderTraking");
         },
         child: Container(
-          width: 412.w,
-          height: 115.h,
+
           decoration: BoxDecoration(
             color: AppColor.white,
             borderRadius: BorderRadius.circular(24),
@@ -41,11 +40,7 @@ class OrderItem extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        Text("#8967456-78 ", style: CustomTextStyle.bold19),
-                      ],
-                    ),
+                    Text("#8967456-78 ", style: CustomTextStyle.bold19),
                     Row(
             
                       children: [
@@ -77,7 +72,7 @@ class OrderItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 50.w),
+           Spacer(),
                 CircleAvatar(
                   radius: 30,
                   backgroundColor: Color(0xffFEC500),

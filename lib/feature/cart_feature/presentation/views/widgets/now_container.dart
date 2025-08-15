@@ -1,11 +1,12 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pure_soft/core/utils/app_color.dart';
 
 
 class NowContainer extends StatelessWidget {
   const NowContainer({super.key, required this.child});
 final Widget child;
+
   @override
   Widget build(BuildContext context) {
     return  Container(

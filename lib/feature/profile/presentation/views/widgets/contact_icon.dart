@@ -8,10 +8,11 @@ class ContactIcon extends StatelessWidget {
 final String icon;
   @override
   Widget build(BuildContext context) {
+    bool isLandScape=MediaQuery.of(context).orientation==Orientation.landscape;
     return  Container(
       alignment: Alignment.center,
-  width: 55.w,
-  height: 55.h,
+  width: isLandScape? 60: 55.w,
+  height:isLandScape?60: 55.h,
       decoration: BoxDecoration(
         
         border: Border.all(color: AppColor.black,width:.5),

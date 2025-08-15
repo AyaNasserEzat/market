@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
@@ -33,7 +33,11 @@ class AdressDetailsContainer extends StatelessWidget {
                 SvgPicture.asset(AppAssetes.addressIcon),
                 Text("  Address 1",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black)),
             Spacer(),
-                CheckContainer(),
+               CheckContainer(
+          index: 4,
+          isSelected: false,
+          onTap: (){},
+        ),
             
             
               ],

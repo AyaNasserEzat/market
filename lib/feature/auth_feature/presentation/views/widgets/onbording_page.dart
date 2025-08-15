@@ -23,38 +23,47 @@ class OnbordingPage extends StatelessWidget {
   final PageController pageController;
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 81.h),
-            Padding(
-              padding: const EdgeInsets.only(right: 30.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [Text(AppStrings.skip, style: CustomTextStyle.regular)],
-              ),
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) { 
+
+        return  SingleChildScrollView(
+          child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                SizedBox(height: constraints.maxHeight*.12),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [Text(AppStrings.skip, style: CustomTextStyle.regular)],
+                  ),
+                ),
+                SizedBox(height: constraints.maxHeight*.012),
+                Image.asset(onBordingModel.image),
+                Text(onBordingModel.title, style: CustomTextStyle.poppins.copyWith(color: AppColor.black)),
+                SizedBox(height: constraints.maxHeight*.018),
+                Text(onBordingModel.subTitle, style: CustomTextStyle.regular),
+               SizedBox(height: constraints.maxHeight*.033),
+                CustomIndicator(currentIndex: currentIndex),
+                  SizedBox(height: constraints.maxHeight*.099),
+                OnbordingBtn(text: currentIndex<2? "next":"Get Started", onTap: () {
+            if (currentIndex<2) {
+              pageController.nextPage(duration: Duration(microseconds:1000 ), curve: Curves.ease);
+            }
+            else{
+              context.push("/login");
+            }
+            
+                }),
+              ],
             ),
-              SizedBox(height: 81.h),
-            Image.asset(onBordingModel.image),
-            Text(onBordingModel.title, style: CustomTextStyle.poppins.copyWith(color: AppColor.black)),
-             SizedBox(height: 16.h),
-            Text(onBordingModel.subTitle, style: CustomTextStyle.regular),
-             SizedBox(height: 98.h),
-            CustomIndicator(currentIndex: currentIndex),
-             SizedBox(height: 98.h),
-            OnbordingBtn(text: currentIndex<2? "next":"Get Started", onTap: () {
-        if (currentIndex<2) {
-          pageController.nextPage(duration: Duration(microseconds:1000 ), curve: Curves.ease);
-        }
-        else{
-          context.push("/login");
-        }
-        
-            }),
-          ],
-        ),
-      ),
+          ),
+                ),
+        );
+       },
+    
     );
   }
 }

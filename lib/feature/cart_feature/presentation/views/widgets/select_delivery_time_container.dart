@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/check_container.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/deliery_time_check_container.dart';
 
 class SelectDeliveryTimeContainer extends StatelessWidget {
   const SelectDeliveryTimeContainer({super.key});
@@ -29,7 +30,7 @@ class SelectDeliveryTimeContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Select Delivery time",style: CustomTextStyle.TitilliumWebBold16.copyWith(color: AppColor.black),),
-               CheckContainer()
+DelieryTimeCheckContainer(),
               ],
             ),
             

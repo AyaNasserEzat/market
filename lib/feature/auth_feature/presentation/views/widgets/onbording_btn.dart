@@ -10,14 +10,14 @@ final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
-      height: 60.h,
-      width: 177.w,
+       height: 50,
+       width: 170,
       child: ElevatedButton(
         onPressed:onTap,
         style: ElevatedButton.styleFrom(
       backgroundColor: AppColor.green, // لون الزرار نفسه
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20), // الـ radius
+        borderRadius: BorderRadius.circular(25), // الـ radius
       ),
       shadowColor: AppColor.black, // لون الظل
       elevation: 10, // قوة الظل

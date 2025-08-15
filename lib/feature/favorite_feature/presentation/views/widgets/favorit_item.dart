@@ -10,31 +10,63 @@ class FavoritItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-
-          decoration: BoxDecoration(
-            color: AppColor.white,
-            borderRadius: BorderRadius.circular(24),
-            boxShadow: [
-              BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 2),
-            ],
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColor.white,
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: [
+          BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 2),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 10,
+          children: [
+            CustomCircleContainer(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               spacing: 10,
               children: [
-                CustomCircleContainer(),
-                Column(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Product Name ",style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 16),),
-                        
-                     InkWell(
+                    Text(
+                      "Product Name ",
+                      style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "12.00 KD  ",
+                      style: CustomTextStyle.regularTitilliumWeb,
+                    ),
+                    Text(
+                      " 14.00 KD",
+                      style: CustomTextStyle.regular.copyWith(
+                        decoration: TextDecoration.lineThrough,
+                        color: AppColor.greyBE,
+                        decorationColor: AppColor.greyBE,
+                      ),
+                    ),
+                  ],
+                ),
+
+                Text(
+                  "Store Name:store 1 ",
+                  style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+       Spacer(),
+           InkWell(
                   onTap: () {
                     
                   },
@@ -51,28 +83,9 @@ class FavoritItem extends StatelessWidget {
                             ),
                     child: Center(child: Icon(Icons.close,size: 13,),)),
                 ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                      Text("12.00 KD  ",style: CustomTextStyle.regularTitilliumWeb,),
-                        Text(
-                          " 14.00 KD",
-                          style: CustomTextStyle.regular.copyWith(decoration: TextDecoration.lineThrough,color: AppColor.greyBE,decorationColor: AppColor.greyBE),
-                        ),
-                      ],
-                    ),
-                       Text("Store Name:store 1 ",style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 16),),
-        
-           
-                  ],
-                ),
-                SizedBox(width: 60.w,),
-               
-              ],
-            ),
-            
-          ),
-        );
+          ],
+        ),
+      ),
+    );
   }
 }
