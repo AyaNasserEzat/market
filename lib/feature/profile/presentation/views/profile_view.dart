@@ -10,6 +10,9 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+                        scrolledUnderElevation: 0,  
+        surfaceTintColor: Colors.transparent,
+      
         title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
         centerTitle: true,
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),

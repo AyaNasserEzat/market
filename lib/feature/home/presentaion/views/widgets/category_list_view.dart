@@ -11,7 +11,7 @@ class CategoryListView extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isLandScape=MediaQuery.of(context).orientation==Orientation.landscape;
     return  SizedBox(
-      height: 130,
+      height: 103,
       child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context,index){

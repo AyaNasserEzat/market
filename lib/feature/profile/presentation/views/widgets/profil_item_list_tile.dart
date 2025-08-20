@@ -12,10 +12,13 @@ final String title;
 final  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading:SvgPicture.asset(imageurl) ,
-      title: Text(title),
-      trailing: IconButton(icon: Icon( Icons.arrow_forward_ios,color: AppColor.gray,size: 15,),onPressed:onPressed ,),
+    return InkWell(
+      onTap: onPressed,
+      child: ListTile(
+        leading:SvgPicture.asset(imageurl) ,
+        title: Text(title),
+        trailing: IconButton(icon: Icon( Icons.arrow_forward_ios,color: AppColor.gray,size: 15,),onPressed:onPressed ,),
+      ),
     );
   }
 }

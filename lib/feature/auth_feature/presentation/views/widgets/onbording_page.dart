@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -37,7 +38,11 @@ class OnbordingPage extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 30.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [Text(AppStrings.skip, style: CustomTextStyle.regular)],
+                    children: [InkWell(
+                      onTap: () {
+                        context.go("/login");
+                      },
+                      child: Text(AppStrings.skip, style: CustomTextStyle.regular))],
                   ),
                 ),
                 SizedBox(height: constraints.maxHeight*.012),

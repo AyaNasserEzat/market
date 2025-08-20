@@ -18,7 +18,7 @@ final String text;
               Text(
                text,
                 style: TextStyle(
-                  fontSize: 28.sp,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: AppColor.black,
                 ),

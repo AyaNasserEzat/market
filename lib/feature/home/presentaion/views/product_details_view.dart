@@ -17,6 +17,9 @@ class ProductDetailsView extends StatelessWidget {
     (
       appBar:  AppBar
     (
+                      scrolledUnderElevation: 0,  
+        surfaceTintColor: Colors.transparent,
+      
           leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: () { context.pop(); },),
       title: Text("product name",style: CustomTextStyle.poppins,),
       centerTitle: true,

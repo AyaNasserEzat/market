@@ -20,6 +20,8 @@ class OrderTrakingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
         title: Text(AppStrings.orderTraking, style: CustomTextStyle.poppins),
         centerTitle: true,
         leading: IconButton(

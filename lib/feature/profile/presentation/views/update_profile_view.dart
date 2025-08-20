@@ -65,7 +65,7 @@ class UpdateProfileView extends StatelessWidget {
               CustomRow(text: AppStrings.password),
               SizedBox(height: 10.h),
               CustomTextFormFiled(text: AppStrings.password),
-                    SizedBox(height: 10.h),
+                    SizedBox(height: 25.h),
                     CustomButton(onpressed: (){}, text: AppStrings.update)
             ],
           ),

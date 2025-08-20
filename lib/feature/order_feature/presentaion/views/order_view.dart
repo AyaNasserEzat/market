@@ -17,8 +17,10 @@ class OrderView extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
-            IconButton(icon: Icon(Icons.arrow_back_ios) ,onPressed: () {
-          //context.pop();
+            IconButton(icon: Icon(Icons.arrow_back_ios,) ,onPressed: () {
+if (context.canPop()) {
+  context.pop();
+}
         },),
         SizedBox(width: 50,),
             Text("My Orders", style:CustomTextStyle.poppins,textAlign: TextAlign.center,),

@@ -11,6 +11,9 @@ class FavoriteView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
             appBar: AppBar(
+                              scrolledUnderElevation: 0,  
+        surfaceTintColor: Colors.transparent,
+      
                 title: Text(AppStrings.favorit, style: CustomTextStyle.poppins),
         centerTitle: true,
         leading: IconButton(onPressed: () {

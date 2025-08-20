@@ -36,7 +36,7 @@ class ProductNameSection extends StatelessWidget {
             Text.rich(
               TextSpan(
                 children: [
-                  TextSpan(text: "KD 12.00", style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 20,color: AppColor.grey65)),
+                  TextSpan(text: "KD 12.00  ", style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 20,color: AppColor.grey65)),
                   TextSpan(
                     text: "KD 14.00",
                     style: CustomTextStyle.regular.copyWith(

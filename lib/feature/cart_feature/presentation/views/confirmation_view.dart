@@ -16,6 +16,8 @@ class ConfirmationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar:  AppBar(
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
         leading: IconButton(icon: Icon(Icons.arrow_back_ios) ,onPressed: () {
           context.pop();
         },),
@@ -31,9 +33,10 @@ class ConfirmationView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             spacing: 5,
-          mainAxisAlignment: MainAxisAlignment.center,
+                 mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 40,),
               SvgPicture.asset(AppAssetes.confirmImage),
               SizedBox(height: 36.h,),
               Text("your order is confirmed!",style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 26,color: AppColor.green),),

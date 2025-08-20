@@ -23,7 +23,7 @@ class AddToCartBtn extends StatelessWidget {
         ),
         child: Row(
           children: [
-            SvgPicture.asset(AppAssetes.bassketIon,width: 28.w,height: 25.h,),
+            SvgPicture.asset(AppAssetes.bassketIon,width: 28,height: 25,),
             Text("  Add to Cart", style: CustomTextStyle.simebold12),
           ],
         ),
