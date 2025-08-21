@@ -9,23 +9,25 @@ class FavoriteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-            appBar: AppBar(
-                              scrolledUnderElevation: 0,  
-        surfaceTintColor: Colors.transparent,
-      
-                title: Text(AppStrings.favorit, style: CustomTextStyle.poppins),
-        centerTitle: true,
-        leading: IconButton(onPressed: () {
-      
-        }, icon: Icon(Icons.arrow_back_ios)),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            FavoritItem()
-          ],
+    return  SafeArea(
+      child: Scaffold(
+              appBar: AppBar(
+                                scrolledUnderElevation: 0,  
+          surfaceTintColor: Colors.transparent,
+        
+                  title: Text(AppStrings.favorit, style: CustomTextStyle.poppins),
+          centerTitle: true,
+          leading: IconButton(onPressed: () {
+        
+          }, icon: Icon(Icons.arrow_back_ios)),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              FavoritItem()
+            ],
+          ),
         ),
       ),
     );

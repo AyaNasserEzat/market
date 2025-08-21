@@ -7,7 +7,8 @@ class CartListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverGrid(
+   return
+SliverGrid(
   delegate: SliverChildBuilderDelegate(
     (BuildContext context, int index) {
       return Padding(
@@ -17,11 +18,11 @@ class CartListView extends StatelessWidget {
     },
     childCount: 6, // عدد العناصر
   ),
-  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 1,       // عدد الأعمدة
+  gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount:  MediaQuery.of(context).size.width<600?1:2,       // عدد الأعمدة
     crossAxisSpacing: 10,    // مسافة أفقية بين العناصر
     mainAxisSpacing: 10,     // مسافة رأسية بين العناصر
-    childAspectRatio: 8/3,   // نسبة العرض للارتفاع
+    childAspectRatio: MediaQuery.of(context).size.width<600?8/2:9/6,   // نسبة العرض للارتفاع
   ),
 )
 ;

@@ -15,24 +15,25 @@ class _OnbordingViewState extends State<OnbordingView> {
   PageController pageController=PageController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView.builder(
-              controller: pageController,
-          onPageChanged: (int index) {
+    return OnbordingPage();
+    //  Scaffold(
+    //   body: PageView.builder(
+    //           controller: pageController,
+    //       onPageChanged: (int index) {
             
-            setState(() {
-              currentIndex=index;
-            });
-          },
-          itemCount: OnBordingModel.onBordingList.length,
-        itemBuilder: (context, index) {
-          return OnbordingPage(
-            onBordingModel: OnBordingModel.onBordingList[index],
-            currentIndex: currentIndex,
-            pageController: pageController,
-          );
-        },
-      ),
-    );
+    //         setState(() {
+    //           currentIndex=index;
+    //         });
+    //       },
+    //       itemCount: OnBordingModel.onBordingList.length,
+    //     itemBuilder: (context, index) {
+    //       return OnbordingPage(
+    //         onBordingModel: OnBordingModel.onBordingList[index],
+    //         currentIndex: currentIndex,
+    //         pageController: pageController,
+    //       );
+    //     },
+    //   ),
+    // );
   }
 }

@@ -14,8 +14,8 @@ final bool isActive;
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
-                  width: 25.w, 
-                  height: 25.h,
+                  width: 25, 
+                  height: 25,
           
                   decoration: BoxDecoration(
                     color: AppColor.white,

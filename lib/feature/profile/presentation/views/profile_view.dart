@@ -8,16 +8,18 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-                        scrolledUnderElevation: 0,  
-        surfaceTintColor: Colors.transparent,
-      
-        title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
-        centerTitle: true,
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+                          scrolledUnderElevation: 0,  
+          surfaceTintColor: Colors.transparent,
+        
+          title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
+          centerTitle: true,
+          leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+        ),
+        body: ProfileBody(),
       ),
-      body: ProfileBody(),
     );
   }
 }

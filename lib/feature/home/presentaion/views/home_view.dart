@@ -21,79 +21,81 @@ class HomeView extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     final bool isLandScap=MediaQuery.of(context).orientation==Orientation.landscape;
 
-    return Scaffold(
-      appBar: AppBar(
-        scrolledUnderElevation: 0,  
-        surfaceTintColor: Colors.transparent,
-        title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
-        actions: [
-          InkWell(
-            onTap: (){
-              context.push("/search");
-            },
-            child: SvgPicture.asset(AppAssetes.searchIcon, width: 25, height: 30)),
-          SizedBox(width: 10),
-          InkWell(
-            onTap: () {
-           showDialog(context: context, builder: (context){
-            return FilterDailog();
-           });
-            },
-            child: SvgPicture.asset(AppAssetes.filterIcon, width: 25, height: 35)),
-        ],
-      ),
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            // Header content
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  children: [
-                    Divider(color: AppColor.gray),
-                    Image.asset(AppAssetes.homeImage, ),
-                    SizedBox(height: 15.h),
-                    CustomIndicator(currentIndex: 0),
-                    SizedBox(height: 15.h),
-                    SizedBox(
-                      height: isLandScap? screenHeight * .30:screenHeight * .15,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          CustomCategoryContainer(image: "assets/images/image 6.png"),
-                          CustomCategoryContainer(image: "assets/images/image 5.png"),
-                          CustomCategoryContainer(image: "assets/images/image 7.png"),
-                          CustomCategoryContainer(image: "assets/images/image 8.png"),
-                        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          scrolledUnderElevation: 0,  
+          surfaceTintColor: Colors.transparent,
+          title: Text(AppStrings.appTitle, style: CustomTextStyle.poppins),
+          actions: [
+            InkWell(
+              onTap: (){
+                context.push("/search");
+              },
+              child: SvgPicture.asset(AppAssetes.searchIcon, width: 25, height: 30)),
+            SizedBox(width: 10),
+            InkWell(
+              onTap: () {
+             showDialog(context: context, builder: (context){
+              return FilterDailog();
+             });
+              },
+              child: SvgPicture.asset(AppAssetes.filterIcon, width: 25, height: 35)),
+          ],
+        ),
+        body: SafeArea(
+          child: CustomScrollView(
+            slivers: [
+              // Header content
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Column(
+                    children: [
+                      Divider(color: AppColor.gray),
+                      Image.asset(AppAssetes.homeImage, ),
+                      SizedBox(height: 15.h),
+                      CustomIndicator(currentIndex: 0),
+                      SizedBox(height: 15.h),
+                      SizedBox(
+                        height: isLandScap? screenHeight * .30:screenHeight * .15,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            CustomCategoryContainer(image: "assets/images/image 6.png"),
+                            CustomCategoryContainer(image: "assets/images/image 5.png"),
+                            CustomCategoryContainer(image: "assets/images/image 7.png"),
+                            CustomCategoryContainer(image: "assets/images/image 8.png"),
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8.0,left: 8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Sallers", style: CustomTextStyle.titilliumWebBoldBlack19),
-                          Text("Show all", style: CustomTextStyle.arial),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8.0,left: 8),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Sallers", style: CustomTextStyle.titilliumWebBoldBlack19),
+                            Text("Show all", style: CustomTextStyle.arial),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-        
-            // Sellers list
-         isLandScap? GridViewLayout():
-           SliverList.separated(
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return CustomContainer(isOpen: true);
-              },
-              separatorBuilder: (context, index) =>
-                  SizedBox(height: screenHeight * .02),
-            )
-          ],
+          
+              // Sellers list
+           isLandScap? GridViewLayout():
+             SliverList.separated(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return CustomContainer(isOpen: true);
+                },
+                separatorBuilder: (context, index) =>
+                    SizedBox(height: screenHeight * .02),
+              )
+            ],
+          ),
         ),
       ),
     );

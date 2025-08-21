@@ -19,14 +19,14 @@ class FilterSeaction extends StatelessWidget {
              
         Row(
           children: [
-            Text("Deliver To  ",style: CustomTextStyle.regularArial,),
+            Text("Delivered To  ",style: CustomTextStyle.regularArial,),
             Image.asset(AppAssetes.deliveryIcon),
     
                 
           ],
         ),
-                 CustomTextFormFiled(text: "All Area"),
-            RowFilterSeaction(text: "  offer"),
+                 CustomTextFormFiled(text: "All Areas"),
+            RowFilterSeaction(text: "  offers"),
                RowFilterSeaction(text: "  free Delivery"),
       ],
     );

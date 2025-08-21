@@ -9,36 +9,38 @@ class OrderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: CustomScrollView(
-  slivers: [
-    SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          children: [
-            IconButton(icon: Icon(Icons.arrow_back_ios,) ,onPressed: () {
-if (context.canPop()) {
-  context.pop();
-}
-        },),
-        SizedBox(width: 50,),
-            Text("My Orders", style:CustomTextStyle.poppins,textAlign: TextAlign.center,),
-          ],
+    return  SafeArea(
+      child: Scaffold(
+        body: CustomScrollView(
+        slivers: [
+      SliverToBoxAdapter(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              IconButton(icon: Icon(Icons.arrow_back_ios,) ,onPressed: () {
+      if (context.canPop()) {
+        context.pop();
+      }
+          },),
+          SizedBox(width: 50,),
+              Text("My Orders", style:CustomTextStyle.poppins,textAlign: TextAlign.center,),
+            ],
+          ),
         ),
       ),
-    ),
-    SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return OrderItem();
-        },
-        childCount: 1,
+      SliverList(
+        delegate: SliverChildBuilderDelegate(
+          (BuildContext context, int index) {
+            return OrderItem();
+          },
+          childCount: 1,
+        ),
       ),
-    ),
-  ],
-)
-
+        ],
+      )
+      
+      ),
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:pure_soft/feature/auth_feature/presentation/views/forget_passwor
 import 'package:pure_soft/feature/auth_feature/presentation/views/login_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/onbording_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/otp_view.dart';
+import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_selection_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/check_out_view.dart';
@@ -27,6 +28,7 @@ class AppRouter {
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
       GoRoute(path: '/login', builder: (context, state) => const LoginView()),
       GoRoute(path: signUp, builder: (context, state) => const SignUpScreen()),
+      GoRoute(path: "/signView", builder: (context, state) => const SignUpSelectionView()),
     
       GoRoute(
         path: "/forgetPassword",

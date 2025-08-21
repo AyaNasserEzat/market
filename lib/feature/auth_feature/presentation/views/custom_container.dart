@@ -15,12 +15,19 @@ class CustomContainer extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         
-        height: 51.h,
-        width: 347.w,
+        height: 51,
+        width: 347,
         decoration: BoxDecoration(
           color: color,
-          border: Border.all(color: AppColor.gray,width: .5),
-          borderRadius: BorderRadius.circular(26)
+
+          borderRadius: BorderRadius.circular(26),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 0),
+              blurRadius: 4,
+              color:  Color(0x40000000)
+            )
+          ]
         ),
         
         child: Row(

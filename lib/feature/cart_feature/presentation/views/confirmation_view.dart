@@ -29,26 +29,28 @@ class ConfirmationView extends StatelessWidget {
  
     ),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
-          child: Column(
-            spacing: 5,
-                 mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(height: 40,),
-              SvgPicture.asset(AppAssetes.confirmImage),
-              SizedBox(height: 36.h,),
-              Text("your order is confirmed!",style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 26,color: AppColor.green),),
-              Text("your order code # 557775",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
-              Text("Thank you for choosing our products!",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
-              
-               SizedBox(height: 30.h,),
-              CustomButton(onpressed: (){}, text: "Continue shopping",),
-              SizedBox(height: 10,),
-              TrackOrderBtn()
-               
-            ],
+          child: Center(
+            child: Column(
+              spacing: 5,
+                   mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 40,),
+                SvgPicture.asset(AppAssetes.confirmImage),
+                SizedBox(height: 36.h,),
+                Text("your order is confirmed!",style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 26,color: AppColor.green),),
+                Text("your order code # 557775",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
+                Text("Thank you for choosing our products!",style: CustomTextStyle.regular.copyWith(fontSize: 20),),
+                
+                 SizedBox(height: 30.h,),
+                CustomButton(onpressed: (){}, text: "Continue shopping",),
+                SizedBox(height: 10,),
+                TrackOrderBtn()
+                 
+              ],
+            ),
           ),
         ),
       ),

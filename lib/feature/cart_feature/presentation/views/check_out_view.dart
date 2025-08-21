@@ -24,6 +24,8 @@ class _CheckOutViewState extends State<CheckOutView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {

@@ -9,7 +9,7 @@ class CategoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isLandScape=MediaQuery.of(context).orientation==Orientation.landscape;
+
     return  SizedBox(
       height: 103,
       child: ListView.separated(
@@ -25,7 +25,7 @@ class CategoryListView extends StatelessWidget {
                     ],
                   );
                 }, separatorBuilder: (context,index){
-                  return SizedBox(width: isLandScape?80: 15,);
+                  return SizedBox(width:  15,);
                 }, itemCount: 4),
     );
   }

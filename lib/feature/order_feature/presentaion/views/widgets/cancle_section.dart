@@ -13,6 +13,7 @@ class CancleSection extends StatelessWidget {
     return  Column(
       children: [
                        Text(AppStrings.cancleOrder,style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 18),),
+             
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(AppStrings.reason,style: CustomTextStyle.regularArial,)),
