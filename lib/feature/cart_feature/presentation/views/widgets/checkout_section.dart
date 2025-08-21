@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/cart_dash_line.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/widgets/dash_line.dart';
 
 class CheckoutSection extends StatelessWidget {
@@ -15,10 +16,7 @@ class CheckoutSection extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8.0,right: 8),
       child: Column(
         children: [
-     CustomPaint(
-      size: Size(screenWidth-8, 8),
-      painter: DashLine(),
-     ),
+// CartDashLine(),
       
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/order_feature/data/model/order_stlye_model.dart';
 import 'package:pure_soft/feature/order_feature/presentaion/views/widgets/order_item.dart';
 
 class OrderView extends StatelessWidget {
@@ -32,9 +33,9 @@ class OrderView extends StatelessWidget {
       SliverList(
         delegate: SliverChildBuilderDelegate(
           (BuildContext context, int index) {
-            return OrderItem();
+            return OrderItem(orderStlyeModel: OrderStlyeModel.orderStlyeList[index],);
           },
-          childCount: 1,
+          childCount: OrderStlyeModel.orderStlyeList.length,
         ),
       ),
         ],

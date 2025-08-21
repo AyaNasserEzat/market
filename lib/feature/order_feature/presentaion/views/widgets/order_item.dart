@@ -5,10 +5,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/order_feature/data/model/order_stlye_model.dart';
 
 class OrderItem extends StatelessWidget {
-  const OrderItem({super.key});
-
+  const OrderItem({super.key, required this.orderStlyeModel});
+final OrderStlyeModel orderStlyeModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,8 +35,8 @@ class OrderItem extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 35,
-                  backgroundColor: Color(0xffFFF3C9),
-                  child: SvgPicture.asset("assets/images/delivring_icon.svg"),
+                  backgroundColor: orderStlyeModel.color2,
+                  child: SvgPicture.asset(orderStlyeModel.icon!),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,8 +66,8 @@ class OrderItem extends StatelessWidget {
                           style: CustomTextStyle.regular.copyWith(fontSize: 16),
                         ),
                         Text(
-                          "Delivaring",
-                          style: CustomTextStyle.regular.copyWith(fontSize: 16,color: Color(0xffFEC500)),
+                         orderStlyeModel.status!,
+                          style: CustomTextStyle.regular.copyWith(fontSize: 16,color: orderStlyeModel.color1),
                         ),
                       ],
                     ),
@@ -75,7 +76,7 @@ class OrderItem extends StatelessWidget {
            Spacer(),
                 CircleAvatar(
                   radius: 30,
-                  backgroundColor: Color(0xffFEC500),
+                  backgroundColor: orderStlyeModel.color1,
                   child: CustomPaint(
                     size: Size(25, 25),
                     painter: rect(),

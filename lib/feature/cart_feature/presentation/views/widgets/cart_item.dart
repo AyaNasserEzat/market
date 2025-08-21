@@ -16,7 +16,8 @@ class CartItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 8, left: 8),
       child: Container(
-        height: MediaQuery.of(context).size.height * .15,
+        height: 115,
+        width: 401,
         decoration: BoxDecoration(
           color: AppColor.white,
           borderRadius: BorderRadius.circular(24),
@@ -51,7 +52,7 @@ class CartItem extends StatelessWidget {
                       ),
                       SizedBox(
                         width:
-                 MediaQuery.of(context).size.width>600?2:    screenWidth * .30,
+                 MediaQuery.of(context).size.width>600?100:    screenWidth * .30,
                       ),
                       //Spacer(),
                       InkWell(child: Icon(Icons.delete_forever)),
@@ -92,12 +93,12 @@ class CartItem extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width:
- MediaQuery.of(context).size.width * .0500,
+                        width: MediaQuery.of(context).size.width>600?
+ MediaQuery.of(context).size.width * .0500:40,
                       ),
                       Container(
-                        // height: MediaQuery.of(context).size.height * .033,
-                        // width: MediaQuery.of(context).size.width * .33,
+                        height: 30,
+                        width:100,
                         decoration: BoxDecoration(
                           color: AppColor.white,
                           borderRadius: BorderRadius.circular(50),

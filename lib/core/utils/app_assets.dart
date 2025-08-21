@@ -42,4 +42,14 @@ class AppAssetes {
   static const String youtubeIcon = 'assets/images/youtube_icon.svg';
   static const String instagramIcon = 'assets/images/instagram_icon.svg';
   static const String facbookIcon = 'assets/images/facbook_icon.svg';
+
+
+  //order
+    static const String newImage = "assets/images/new_image.svg";
+  static const String finishedImage = "assets/images/finished_img.svg";
+  static const String cancelImage = "assets/images/canle_image.svg"; 
+  static const String workingImage = "assets/images/working_image.svg";
+  static const String deliveredImage = "assets/images/delivered_image.svg";
+  static const String delivering=  "assets/images/delivring_icon.svg";
+
 }

@@ -67,4 +67,12 @@ static const String checkOutTitle = 'Checkout';
     static const String cash = "Cash of Delivery ";
       static const String credit = "Credit Card/Debit Card ";
         static const String knet = "Knet";
+//order
+          static const String newOrder = "New";
+  static const String deliveredOrder = "Delivered";
+    static const String delivering = "Delivering";
+  static const String cancelledOrder = "Cancelled";
+  static const String workingOrder = "Working";
+  static const String finishedOrder = "Finished";
+
 }

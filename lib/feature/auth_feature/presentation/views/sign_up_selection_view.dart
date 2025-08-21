@@ -23,7 +23,7 @@ class SignUpSelectionView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 AuthHeader(text: AppStrings.welcomeMessage,),
-                SizedBox(height: 20.h),
+                SizedBox(height: 20),
                 LoginButtonSection(),
                 AlearduMemberText(text: AppStrings.alreadyMember,text2: AppStrings.signIn,onPressed: (){
                   context.go("/login");
