@@ -38,82 +38,86 @@ class GridViewContainer extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 1.0, top: 8, bottom: 8),
             child: Row(
-
+spacing:10,
      
               children: [
                CustomCircleContainer(),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Saller Name ",
-                          style: CustomTextStyle.titilliumWebBoldBlack19,
-                        ),
-
-                        Image.asset(AppAssetes.offerIcon),
-                      SizedBox(width: 20,),
-                        Text(
-                          "4.5",
-                          style: CustomTextStyle.regularTitilliumWeb16,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Image.asset(AppAssetes.deliveryIcon),
-                        Text(
-                          "  Delivery charge:34.0 KD",
-                          style: CustomTextStyle.regularTitilliumWeb,
-                        ),
-                      ],
-                    ),
-
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: AppColor.gray2,
-                          radius: 3,
-                        ),
-                        Text(
-                          isOpen ? " Open  " : " closed  ",
-                          style:
-                              isOpen
-                                  ? CustomTextStyle.regular.copyWith(
-                                    color: AppColor.green3,
-                                  )
-                                  : CustomTextStyle.regular.copyWith(
-                                    color: AppColor.red,
-                                  ),
-                        ),
-                        CircleAvatar(
-                          backgroundColor: AppColor.gray2,
-                          radius: 3,
-                        ),
-                        Text(
-                          "  Pizaa  ",
-                          style: CustomTextStyle.regular.copyWith(
-                            color: AppColor.blue,
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "Saller Name ",
+                            style: CustomTextStyle.titilliumWebBoldBlack19,
                           ),
-                        ),
-SizedBox(width: 20,),
-                        Text(
-                          "23 KM ",
-                          style: CustomTextStyle.regularArial.copyWith(
-                            color: AppColor.green38,
+                  
+                          Image.asset(AppAssetes.offerIcon),
+                     SizedBox(width: screenWidth*.10,),
+                       
+                          Text(
+                            "4.5",
+                            style: CustomTextStyle.regularTitilliumWeb16,
                           ),
-                        ),
-
-                        SvgPicture.asset(
-                          AppAssetes.locationIcon,
-                          width: 18,
-                          height: 18,
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Image.asset(AppAssetes.deliveryIcon),
+                          Text(
+                            "  Delivery charge:34.0 KD",
+                            style: CustomTextStyle.regularTitilliumWeb,
+                          ),
+                        ],
+                      ),
+                  
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: AppColor.gray2,
+                            radius: 3,
+                          ),
+                          Text(
+                            isOpen ? " Open  " : " closed  ",
+                            style:
+                                isOpen
+                                    ? CustomTextStyle.regular.copyWith(
+                                      color: AppColor.green3,
+                                    )
+                                    : CustomTextStyle.regular.copyWith(
+                                      color: AppColor.red,
+                                    ),
+                          ),
+                          CircleAvatar(
+                            backgroundColor: AppColor.gray2,
+                            radius: 3,
+                          ),
+                          Text(
+                            "  Pizaa  ",
+                            style: CustomTextStyle.regular.copyWith(
+                              color: AppColor.blue,
+                            ),
+                          ),
+                  SizedBox(width: screenWidth*.10,),
+                          Text(
+                            "23 KM ",
+                            style: CustomTextStyle.regularArial.copyWith(
+                              color: AppColor.green38,
+                            ),
+                          ),
+                  
+                          SvgPicture.asset(
+                            AppAssetes.locationIcon,
+                            width: 18,
+                            height: 18,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
  
               ],

@@ -72,8 +72,8 @@ class FavoritItem extends StatelessWidget {
                   },
                   child: Container(
                     alignment: Alignment.center,
-                    width: 25.w,
-                    height: 25.h,
+                    width: 25,
+                    height: 25,
                      decoration: BoxDecoration(
                               color: AppColor.white,
                       shape: BoxShape.circle,

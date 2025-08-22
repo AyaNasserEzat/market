@@ -8,7 +8,7 @@ import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/widgets/custom_indicator.dart';
-import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_container.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_container_home.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_category_containr.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/filter_dailog.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/grid_view_layout.dart';
@@ -85,15 +85,16 @@ class HomeView extends StatelessWidget {
               ),
           
               // Sellers list
-           isLandScap? GridViewLayout():
-             SliverList.separated(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return CustomContainer(isOpen: true);
-                },
-                separatorBuilder: (context, index) =>
-                    SizedBox(height: screenHeight * .02),
-              )
+              GridViewLayout()
+          //  isLandScap? GridViewLayout():
+          //    SliverList.separated(
+          //       itemCount: 5,
+          //       itemBuilder: (context, index) {
+          //         return CustomContainerHome(isOpen: true);
+          //       },
+          //       separatorBuilder: (context, index) =>
+          //           SizedBox(height: screenHeight * .02),
+          //     )
             ],
           ),
         ),

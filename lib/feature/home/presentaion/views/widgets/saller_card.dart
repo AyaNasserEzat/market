@@ -37,7 +37,7 @@ class SallerCard extends StatelessWidget {
                 Row(
                   children: [
                     Text("saller name", style: CustomTextStyle.TitilliumWebBold16),
-                        SizedBox(width: 110,),
+                        SizedBox(width:  MediaQuery.of(context).size.width>600? MediaQuery.of(context).size.width*.60: MediaQuery.of(context).size.width*.33 ,),
                 Image.asset(AppAssetes.offer,),
                   ],
                 ),

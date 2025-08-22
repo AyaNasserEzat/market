@@ -19,16 +19,16 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(430, 932),
       minTextAdapt: true,
-      // builder: (context, child) {
-      //   // print('SafeArea builder called.');
-      //   // print('Platform.isAndroid: ${Platform.isAndroid}');
+      builder: (context, child) {
+        // print('SafeArea builder called.');
+        // print('Platform.isAndroid: ${Platform.isAndroid}');
 
-      //   return SafeArea(
-      //     top: false,
-      //     bottom: Platform.isAndroid ? true : false,
-      //     child: child!,
-      //   );
-      // },
+        return SafeArea(
+          top: false,
+          bottom: Platform.isAndroid ? true : false,
+          child: child!,
+        );
+      },
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

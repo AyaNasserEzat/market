@@ -7,8 +7,8 @@ import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
 
-class CustomContainer extends StatelessWidget {
-  const CustomContainer({super.key, required this.isOpen});
+class CustomContainerHome extends StatelessWidget {
+  const CustomContainerHome({super.key, required this.isOpen});
   final bool isOpen;
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CustomContainer extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 8.0,right: 8),
         child: Container(
-     width: double.infinity,
+     //width: double.infinity,
       
           decoration: BoxDecoration(
             color: AppColor.white,
@@ -35,6 +35,7 @@ class CustomContainer extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 8.0,top: 8,bottom: 8),
             child: Row(
+              mainAxisSize: MainAxisSize.min,
               spacing: 10,
               children: [
          CustomCircleContainer(),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pure_soft/core/utils/app_color.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer({super.key, required this.icon, required this.text, required this.color, required this.widget, required this.textcolor});
+  const CustomContainer({super.key, required this.icon, required this.text, required this.color, required this.widget, required this.textcolor,});
  final IconData icon;
  final String text;
  final Color color;

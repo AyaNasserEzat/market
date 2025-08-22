@@ -59,9 +59,9 @@ class _OnbordingPageState extends State<OnbordingPage> {
                       ),
                     ),
                     SizedBox(height: constraints.maxHeight * .012),
-                    Image.asset(AppAssetes.onbording),
+                   
                     SizedBox(
-                      height: 200,
+                      height: 500,
                       child: PageView.builder(
                         controller: pageController,
                         onPageChanged: (int index) {
@@ -73,6 +73,7 @@ class _OnbordingPageState extends State<OnbordingPage> {
                         itemBuilder: (context, index) {
                           return Column(
                             children: [
+                               Image.asset(AppAssetes.onbording),
                               Text(
                                 OnBordingModel.onBordingList[index].title,
                                 style: CustomTextStyle.poppins.copyWith(
