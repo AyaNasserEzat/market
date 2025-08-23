@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pure_soft/core/services/local_notification.dart';
 import 'package:pure_soft/core/utils/app_assets.dart' show AppAssetes;
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/app_strings.dart';
@@ -68,7 +69,9 @@ class ProfileBody extends StatelessWidget {
     ProfileItemListTile(
       imageurl: AppAssetes.about,
       title: AppStrings.aboutUs,
-      onPressed: () {},
+      onPressed: () {
+     
+      },
     ),
     
          
