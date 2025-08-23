@@ -2,10 +2,22 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class LocalNotification {
-static  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+  static FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
-      static onTap(NotificationResponse notificationResponse){}
- static Future initLocalNotification() async {
+  static AndroidNotificationChannel channel = AndroidNotificationChannel(
+    "default_channel_id",
+    "head up notification",
+    importance: Importance.max,
+  );
+  static onTap(NotificationResponse notificationResponse) {}
+  static Future initLocalNotification() async {
+    //head up background notification
+    flutterLocalNotificationsPlugin
+        .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin
+        >()
+        ?.createNotificationChannel(channel);
+
     AndroidInitializationSettings android = AndroidInitializationSettings(
       "@mipmap/ic_launcher",
     );
@@ -14,17 +26,29 @@ static  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       android: android,
       iOS: ios,
     );
-    flutterLocalNotificationsPlugin.initialize(settings,
-    onDidReceiveBackgroundNotificationResponse: onTap,
-    onDidReceiveNotificationResponse: onTap
+    flutterLocalNotificationsPlugin.initialize(
+      settings,
+      onDidReceiveBackgroundNotificationResponse: onTap,
+      onDidReceiveNotificationResponse: onTap,
     );
-
-    
   }
 
-static showNotification(RemoteMessage message){
-  AndroidNotificationDetails androidNotificationDetails= AndroidNotificationDetails("channelId", "channelName",priority: Priority.high,importance: Importance.max);
-  NotificationDetails notificationDetails=NotificationDetails(android:androidNotificationDetails);
-  flutterLocalNotificationsPlugin.show(0, message.notification?.title, message.notification?.body, notificationDetails);
-}
+  static showNotification(RemoteMessage message) {
+    AndroidNotificationDetails androidNotificationDetails =
+        AndroidNotificationDetails(
+          "channelId",
+          "channelName",
+          priority: Priority.high,
+          importance: Importance.max,
+        );
+    NotificationDetails notificationDetails = NotificationDetails(
+      android: androidNotificationDetails,
+    );
+    flutterLocalNotificationsPlugin.show(
+      0,
+      message.notification?.title,
+      message.notification?.body,
+      notificationDetails,
+    );
+  }
 }
