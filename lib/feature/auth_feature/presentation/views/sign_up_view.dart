@@ -28,10 +28,7 @@ class SignUpScreen extends StatelessWidget {
                  SizedBox(height: 32.h),
   
 SignUpFormSection(),
-                 SizedBox(height: 16.h),
-                CustomButton(text: AppStrings.signUp, onpressed: () {
-              
-                },),
+             
                 SizedBox(height: 20.h,),
                 AlearduMemberText(
                   text: AppStrings.loginRedirect,

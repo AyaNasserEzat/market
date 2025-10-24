@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 
 class CustomTextFormFiled extends StatelessWidget {
-  const CustomTextFormFiled({super.key, required this.text});
+  const CustomTextFormFiled({super.key, required this.text,  this.controller});
   final String text;
+  final TextEditingController ?controller;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,9 +18,9 @@ class CustomTextFormFiled extends StatelessWidget {
         ],
       ),
       child: TextField(
+        controller: controller,
         decoration: InputDecoration(
           hintText: text,
-
           border: InputBorder.none,
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
