@@ -1,4 +1,5 @@
 
+import 'package:pure_soft/feature/auth_feature/data/models/login_response_model.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/register_response_model.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/user_model.dart';
 
@@ -12,7 +13,7 @@ class AuthLoading extends AuthState {}
 
 // ✅ نجاح تسجيل الدخول
 class LoginSuccess extends AuthState {
-  final UserData user;
+  final LoginResponseModel user;
   LoginSuccess({required this.user});
 }
 
