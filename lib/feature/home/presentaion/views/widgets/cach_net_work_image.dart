@@ -8,8 +8,8 @@ final String img;
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 82,
-      width: 82,
+        height: 85,
+      width: 85,
       decoration: BoxDecoration(
         color: AppColor.white,
         shape: BoxShape.circle,

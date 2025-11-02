@@ -7,20 +7,16 @@ import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 import 'package:pure_soft/feature/home/data/models/vendor.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/cach_net_work_image.dart';
-import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
 
 class CustomContainerHome extends StatelessWidget {
   const CustomContainerHome({super.key, required this.vendor});
   final Vendor vendor;
   @override
   Widget build(BuildContext context) {
-        final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
-
 
     return GestureDetector(
       onTap: () {
-        context.push("/sallerProduct");
+        context.push("/sallerProduct",extra: vendor);
       },
       child: Padding(
         padding: const EdgeInsets.only(left: 8.0,right: 8),

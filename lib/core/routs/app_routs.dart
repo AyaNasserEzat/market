@@ -6,9 +6,12 @@ import 'package:pure_soft/feature/auth_feature/presentation/views/otp_view.dart'
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_selection_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/sign_up_view.dart';
 import 'package:pure_soft/feature/auth_feature/presentation/views/splash_view.dart';
+import 'package:pure_soft/feature/cart_feature/presentation/views/cart_view.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/check_out_view.dart';
 import 'package:pure_soft/feature/cart_feature/presentation/views/confirmation_view.dart';
 import 'package:pure_soft/feature/favorite_feature/presentation/views/favorite_view.dart';
+import 'package:pure_soft/feature/home/data/models/product_model.dart';
+import 'package:pure_soft/feature/home/data/models/vendor.dart';
 import 'package:pure_soft/feature/home/presentaion/views/bottom_navigation_bar.dart';
 import 'package:pure_soft/feature/home/presentaion/views/home_view.dart';
 import 'package:pure_soft/feature/home/presentaion/views/product_details_view.dart';
@@ -47,17 +50,24 @@ class AppRouter {
         builder: (context, state) =>  BottomNavigationBar(),
       ),
                      GoRoute(
-        path: "/sallerProduct",
-        builder: (context, state) =>  SallerProductView(),
-      ),
+  path: "/sallerProduct",
+  builder: (context, state) {
+    final vendor = state.extra as Vendor; // استقبلي الموديل هنا
+    return SallerProductView(vendor: vendor);
+  },
+),
+
 
                            GoRoute(
         path: "/productDetails",
-        builder: (context, state) =>  ProductDetailsView(),
+        builder: (context, state) {
+          final  productModel=state.extra as ProductModel;
+          return ProductDetailsView(productModel: productModel);
+        } 
       ),
                                  GoRoute(
         path: "/cart",
-        builder: (context, state) =>  ProductDetailsView(),
+        builder: (context, state) =>  CartView(),
       ),
        GoRoute(
         path: "/updateProfile",

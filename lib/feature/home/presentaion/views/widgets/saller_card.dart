@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/home/data/models/vendor.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/cach_net_work_image.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
 
 class SallerCard extends StatelessWidget {
-  const SallerCard({super.key, required this.isOpen});
-  final bool isOpen;
+  const SallerCard({super.key, required this.vendor});
+  final Vendor vendor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +30,7 @@ class SallerCard extends StatelessWidget {
           spacing: 10,
           //crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomCircleContainer(),
+     CachNetWorkImage(img: vendor.img),
 
             Column(
               spacing: 10,
@@ -36,7 +38,7 @@ class SallerCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("saller name", style: CustomTextStyle.TitilliumWebBold16),
+                    Text(vendor.nameEn?? "saller name", style: CustomTextStyle.TitilliumWebBold16),
                         SizedBox(width:  MediaQuery.of(context).size.width>600? MediaQuery.of(context).size.width*.60: MediaQuery.of(context).size.width*.33 ,),
                 Image.asset(AppAssetes.offer,),
                   ],
@@ -51,9 +53,9 @@ class SallerCard extends StatelessWidget {
                   children: [
                     CircleAvatar(backgroundColor: AppColor.gray2, radius: 3),
                     Text(
-                      isOpen ? " Open  " : " closed  ",
+                      vendor.isOpened=="Y" ? " Open  " : " closed  ",
                       style:
-                          isOpen
+                            vendor.isOpened=="Y"
                               ? CustomTextStyle.regular.copyWith(
                                 color: AppColor.green3,
                               )
@@ -63,7 +65,7 @@ class SallerCard extends StatelessWidget {
                     ),
                     CircleAvatar(backgroundColor: AppColor.gray2, radius: 3),
                     Text(
-                      "  4.5  ",
+                      " ${vendor.rate}  ",
                       style: CustomTextStyle.regular.copyWith(
                         color: AppColor.blue,
                       ),

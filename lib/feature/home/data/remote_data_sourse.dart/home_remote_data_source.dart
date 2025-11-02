@@ -1,9 +1,11 @@
 import 'package:pure_soft/core/database/api/api_consumer.dart';
 import 'package:pure_soft/core/database/api/end_point.dart';
+import 'package:pure_soft/feature/home/data/models/product_model.dart';
 import 'package:pure_soft/feature/home/data/models/vendor.dart';
 
 abstract class HomeRemoteDataSource {
  Future<List<Vendor>> getVendor();
+  Future<List<ProductModel>> getProductVendor(int vendorId);
 }
 
 class HomeRemoteDataSourceImpl extends HomeRemoteDataSource{
@@ -19,6 +21,17 @@ for (var vendor in res["data"]["data"]) {
 }
 
 return vendorList;
+  }
+  
+  @override
+  Future<List<ProductModel>> getProductVendor(int vendorId)async {
+  List<ProductModel> products=[];
+final res=  await api.get("${EndPoint.getVendorProducts}?vendor_id=$vendorId");
+for (var vendor in res["data"]) {
+  products.add(ProductModel.fromJson(vendor));
+}
+
+return products;
   }
 
 }

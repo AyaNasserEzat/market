@@ -12,4 +12,9 @@ emit(VendorLoading());
 final res= await homeRepo.getVendor();
 res.fold((l)=>emit(VendorError(message: l.errorMessage)), (r)=>emit(VendorSuccess(vendor: r)));
   }
+    getVendorProducts(int vendorId)async{
+emit(VendorLoading());
+final res= await homeRepo.getVendorProducts(vendorId);
+res.fold((l)=>emit(VendorProductsError(message: l.errorMessage)), (r)=>emit(VendorProductsSuccess(vendor: r)));
+  }
 }
