@@ -2,6 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:pure_soft/core/errors/exceptions.dart';
 import 'package:pure_soft/core/errors/failure.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/auth_qerparmeter.dart';
+import 'package:pure_soft/feature/auth_feature/data/models/forget_password_model.dart';
+import 'package:pure_soft/feature/auth_feature/data/models/forget_password_quer_parameter.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/login_quer_parmeters.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/login_response_model.dart';
 import 'package:pure_soft/feature/auth_feature/data/models/register_response_model.dart';
@@ -9,6 +11,7 @@ import 'package:pure_soft/feature/auth_feature/data/remote_data_soures/auth_remo
 abstract class AuthRepo{
 Future<Either<Failure, RegisterResponseModel>> register(AuthQerparmeter querParameters);
 Future<Either<Failure, LoginResponseModel>> login(LoginQuerParmeters querParameters);
+Future<Either<Failure, ForgetPasswordModel>> forgetPasswoed(ForgetPasswordQuerParameter querParameters);
 }
 class AuthRepoImp extends AuthRepo {
   final AuthRemoteDataSource authRemoteDataSource;
@@ -34,6 +37,21 @@ return left(Failure(errorMessage: e.errorModel.errorMessage));
   Future<Either<Failure, LoginResponseModel>> login(LoginQuerParmeters querParameters) async{
 try{
 final res=await authRemoteDataSource.login(querParameters);
+if(res.status==true){
+return Right(res);
+}
+else{
+  return left(Failure(errorMessage:res.message!));
+}
+}on ServerException catch(e){
+return left(Failure(errorMessage: e.errorModel.errorMessage));
+}
+  }
+  
+  @override
+  Future<Either<Failure, ForgetPasswordModel>> forgetPasswoed(ForgetPasswordQuerParameter querParameters) async{
+try{
+final res=await authRemoteDataSource.forgetPassword(querParameters);
 if(res.status==true){
 return Right(res);
 }

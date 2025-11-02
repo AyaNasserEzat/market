@@ -1,0 +1,24 @@
+import 'package:pure_soft/core/database/api/api_consumer.dart';
+import 'package:pure_soft/core/database/api/end_point.dart';
+import 'package:pure_soft/feature/home/data/models/vendor.dart';
+
+abstract class HomeRemoteDataSource {
+ Future<List<Vendor>> getVendor();
+}
+
+class HomeRemoteDataSourceImpl extends HomeRemoteDataSource{
+ final ApiConsumer api;
+
+  HomeRemoteDataSourceImpl({required this.api});
+  @override
+Future<List<Vendor>> getVendor()async {
+  List<Vendor> vendorList=[];
+final res=  await api.get(EndPoint.getVendor);
+for (var vendor in res["data"]["data"]) {
+  vendorList.add(Vendor.fromJson(vendor));
+}
+
+return vendorList;
+  }
+
+}

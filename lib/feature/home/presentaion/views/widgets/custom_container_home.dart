@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pure_soft/core/utils/app_assets.dart';
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
+import 'package:pure_soft/feature/home/data/models/vendor.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/cach_net_work_image.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_circle_container.dart';
 
 class CustomContainerHome extends StatelessWidget {
-  const CustomContainerHome({super.key, required this.isOpen});
-  final bool isOpen;
+  const CustomContainerHome({super.key, required this.vendor});
+  final Vendor vendor;
   @override
   Widget build(BuildContext context) {
         final screenWidth = MediaQuery.of(context).size.width;
@@ -38,7 +40,8 @@ class CustomContainerHome extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               spacing: 10,
               children: [
-         CustomCircleContainer(),
+        // CustomCircleContainer(),
+        CachNetWorkImage(img: vendor.img),
                 Column(
                   spacing: 10,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,11 +49,11 @@ class CustomContainerHome extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text("Saller Name ",style: CustomTextStyle.titilliumWebBoldBlack19,),
+                        Text(vendor.nameEn??"no name",style: CustomTextStyle.titilliumWebBoldBlack19,),
                         
                         Image.asset(AppAssetes.offerIcon),
                         SizedBox(width:80,),
-                         Text("4.5",style: CustomTextStyle.regularTitilliumWeb16,),
+                         Text(vendor.rate,style: CustomTextStyle.regularTitilliumWeb16,),
                       ],
                     ),
                     Row(
@@ -69,8 +72,8 @@ class CustomContainerHome extends StatelessWidget {
                       children: [
                         CircleAvatar(backgroundColor: AppColor.gray2, radius: 3),
                         Text(
-                          isOpen ? " Open  " : " closed  ",
-                          style: isOpen?CustomTextStyle.regular.copyWith(color: AppColor.green3): CustomTextStyle.regular.copyWith(color: AppColor.red),
+                          vendor.isOpened =="Y"? " Open  " : " closed  ",
+                          style:   vendor.isOpened =="Y"?CustomTextStyle.regular.copyWith(color: AppColor.green3): CustomTextStyle.regular.copyWith(color: AppColor.red),
                         ),
                         CircleAvatar(backgroundColor: AppColor.gray2, radius: 3),
                         Text("  Pizaa  ", style: CustomTextStyle.regular.copyWith(color: AppColor.blue)),
