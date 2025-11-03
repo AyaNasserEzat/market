@@ -19,9 +19,9 @@ final ProductModel productModel;
              productModel.nameCategoryEn?? "Category Name",
               style: CustomTextStyle.TitilliumWebBold16.copyWith(fontSize: 16.sp),
             ),
-            SizedBox(width: 220.w,),
+         Spacer(),
                        Text(
-              "price ",
+              "price   ",
               style: CustomTextStyle.regularTitilliumWeb.copyWith(fontSize: 14.sp),
             ),
          
@@ -30,9 +30,11 @@ final ProductModel productModel;
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-            productModel.nameEn??  "product name",
-              style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 24.sp),
+            Expanded(
+              child: Text(
+              productModel.nameEn??  "product name",
+                style: CustomTextStyle.titilliumWebBoldBlack19.copyWith(fontSize: 24,overflow: TextOverflow.visible),
+              ),
             ),
             Text.rich(
               TextSpan(

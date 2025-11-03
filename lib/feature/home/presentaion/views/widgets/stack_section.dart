@@ -1,32 +1,31 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:pure_soft/core/utils/app_color.dart';
 import 'package:pure_soft/core/utils/text_style.dart';
 
 class StackSection extends StatelessWidget {
-  const StackSection({super.key});
-
+  const StackSection({super.key, required this.img});
+final String img;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Container(
-        //   decoration: BoxDecoration(
-        //     borderRadius: BorderRadius.circular(30),
-        //     color: AppColor.gray,
-        //   ),
-        //   width: 388.w,
-        //   height: 232.h,
-        //   child: ClipRRect(
-        //     borderRadius: BorderRadius.circular(12),
-        //     child: Image.asset(
-        //       'assets/images/fruits.png',
-        //       fit: BoxFit.fill,
-        //     ), // بدليه بالصورة المناسبة
-        //   ),
-        // ),
-        Image.asset("assets/images/image 10.png"),
+
+       ClipRRect(
+        borderRadius: BorderRadiusGeometry.circular(16),
+         child: CachedNetworkImage(
+           imageUrl: 'https://fruits.sys-web.net/uploads/$img',
+           height: 250,
+           width: double.infinity,
+          fit: BoxFit.fitWidth,
+           placeholder: (context, url) => const Center(
+             child: CircularProgressIndicator(strokeWidth: 2),
+           ),
+           errorWidget: (context, url, error) => const Icon(Icons.error),
+         ),
+       )
+,
         Positioned(
           top: 10,
           right: 10,

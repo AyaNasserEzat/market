@@ -6,4 +6,5 @@ class EndPoint {
     static const String forgetPassword="/forget_pass_user";
       static const String getVendor = "/getvendors";
           static const String getVendorProducts = "/get_vendor_products";
+          static const String  getbanner=    "/advertising/t/en/0";
 }

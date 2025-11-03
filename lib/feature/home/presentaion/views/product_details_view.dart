@@ -22,7 +22,7 @@ final ProductModel productModel;
         surfaceTintColor: Colors.transparent,
       
           leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: () { context.pop(); },),
-      title: Text("product name",style: CustomTextStyle.poppins,),
+      title: Text( "product name",style: CustomTextStyle.poppins,),
       centerTitle: true,
       actions: [
 SvgPicture.asset(AppAssetes.favorite,width: 25,),
@@ -37,7 +37,7 @@ SizedBox(width: 10,)
         child: Column(
           spacing: 10,
           children: [
-            StackSection(),
+            StackSection(img: productModel.img??"",),
             ProductNameSection(productModel: productModel,),
             SelectWeightSection(),
             SelectWeightSection(),

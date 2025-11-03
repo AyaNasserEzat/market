@@ -18,6 +18,7 @@ import 'package:pure_soft/feature/home/presentaion/view_models/vendor_cubit.dart
 import 'package:pure_soft/feature/home/presentaion/views/widgets/custom_category_containr.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/filter_dailog.dart';
 import 'package:pure_soft/feature/home/presentaion/views/widgets/grid_view_layout.dart';
+import 'package:pure_soft/feature/home/presentaion/views/widgets/silder.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -67,9 +68,10 @@ class HomeView extends StatelessWidget {
                     child: Column(
                       children: [
                         Divider(color: AppColor.gray),
-                        Image.asset(AppAssetes.homeImage, ),
-                        SizedBox(height: 15.h),
-                        CustomIndicator(currentIndex: 0),
+                       // Image.asset(AppAssetes.homeImage, ),
+           ImageCarouselWithCustomIndicator(),
+                   
+                   
                         SizedBox(height: 15.h),
                         SizedBox(
                           height: isLandScap? screenHeight * .30:screenHeight * .15,
