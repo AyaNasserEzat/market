@@ -19,7 +19,7 @@ platform :android do
   desc "Distrbute app to firebase app  distribution"
   lane :distribute  do
     sh "flutter clean"
-    sh "flutter build apk --release --flavor staging -t lib/main_stag.dart"
+    sh "flutter build apk --release --flavor staging -t lib/main_stg.dart"
    firebase_app_distribution(
     app: "1:201286627640:android:27c5bcaf43e62b080e11cd",
     firebase_cli_token:ENV["FIREBASE_CLI_TOKEN"],
