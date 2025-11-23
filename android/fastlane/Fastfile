@@ -26,7 +26,7 @@ platform :android do
   android_artifact_type:"APK",
   release_notes:"new realse to test",
   testers:"alanasrabwalswd@gmail.com",
-  android_artifact_path:"../build/app/outputs/flutter-apk/app-release.apk"
+  android_artifact_path:"../build/app/outputs/flutter-apk/app-staging-release.apk"
   
   )
 
